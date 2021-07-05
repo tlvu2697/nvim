@@ -1,0 +1,30 @@
+{
+  "languageserver": {},
+
+  "coc.source.file.enable": false,
+  "coc.preferences.extensionUpdateCheck": "daily",
+
+  "list.normalMappings": {
+    "v": "action:vsplit",
+    "s": "action:split"
+  },
+
+  "diagnostic.messageTarget": "echo",
+  "diagnostic.checkCurrentLine": false,
+  "suggest.maxCompleteItemCount": 25,
+  "suggest.minTriggerInputLength": 3,
+
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "solargraph.promptDownload": false,
+  "solargraph.checkGemVersion": false,
+  "solargraph.symbols": false,
+
+  "eslint.autoFixOnSave": true,
+  "eslint.run": "onSave",
+
+  "yaml.format.enable": true,
+
+  "javascript.suggestionActions.enabled": false,
+  "typescript.suggestionActions.enabled": false
+}
