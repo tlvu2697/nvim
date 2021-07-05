@@ -21,7 +21,10 @@ require'nvim-treesitter.configs'.setup {
     'ruby',
     'yaml',
   },
-  highlight = { enable = true },
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = true,
+  },
   indent = { enable = true },
   autopairs = { enable = true },
   autotag = { enable = true },
