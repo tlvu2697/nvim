@@ -40,10 +40,10 @@ map('n', '<space><space>', '<ESC>:w<CR>', { silent = true })                    
 map('n', '<space>q', '<ESC>:q<CR>', { silent = true })                                       --> File > Close
 map('n', '<space>wq', '<ESC>:wq<CR>', { silent = true })                                     --> File > Save & Close
 map('n', '<space>ft', ':NERDTreeMirror<CR>:NERDTreeToggle<CR>', { silent = true })           --> File > Tree
-map('n', '<space>fed', ':vsplit ~/.config/nvim/init.vim<CR>', { silent = true })             --> File > Editor > Definition
+map('n', '<space>fed', ':vsplit ~/.config/nvim/init.lua<CR>', { silent = true })             --> File > Editor > Definition
 map('n', '<space>fez', ':vsplit ~/.zshrc<CR>', { silent = true })                            --> File > Editor > ZSH
 map('n', '<space>fet', ':vsplit ~/.tmux.conf<CR>', { silent = true })                        --> File > Editor > Tmux
-map('n', '<space>fer', ':source ~/.config/nvim/init.vim<CR>')                                --> File > Editor > Reload
+map('n', '<space>fer', ':Restart<CR>')                                                       --> File > Editor > Restart
 map('n', '<space>ff', ':Files %:p:h<CR>', { silent = true })                                 --> File > Find > File in Current Directory
 map('n', '<space>fh', ':History<CR>', { silent = true })                                     --> File > Find > File in History
 map('n', '<space>fc', ':saveas <C-R>=expand("%:p:h")<CR>/', { silent = true })               --> File > Copy

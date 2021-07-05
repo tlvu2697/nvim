@@ -1,5 +1,5 @@
 ----------------------------------------------------
--- https://github.com/ntpeters/neoclide/coc.nvim
+-- https://github.com/neoclide/coc.nvim
 ----------------------------------------------------
 cmd([[
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
