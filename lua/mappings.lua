@@ -1,7 +1,7 @@
 ----------------------------------------------------
 -- SECTION: Windows
 ----------------------------------------------------
-map('n', '<space>0', ':NERDTreeFind<CR>', { silent = true })            --> Window > Find
+map('n', '<space>0', ':NvimTreeFindFile<CR>', { silent = true })            --> Window > Find
 map('n', '<space>1', ":exe 1 . 'wincmd w'<CR>", { silent = true })      --> Window 1
 map('n', '<space>2', ":exe 2 . 'wincmd w'<CR>", { silent = true })      --> Window 2
 map('n', '<space>3', ":exe 3 . 'wincmd w'<CR>", { silent = true })      --> Window 3
@@ -39,7 +39,7 @@ map('n', '<space><S-Tab>', 'gT', { silent = true })   --> Previous tab
 map('n', '<space><space>', '<ESC>:w<CR>', { silent = true })                                 --> File > Save
 map('n', '<space>q', '<ESC>:q<CR>', { silent = true })                                       --> File > Close
 map('n', '<space>wq', '<ESC>:wq<CR>', { silent = true })                                     --> File > Save & Close
-map('n', '<space>ft', ':NERDTreeMirror<CR>:NERDTreeToggle<CR>', { silent = true })           --> File > Tree
+map('n', '<space>ft', ':NvimTreeToggle<CR>', { silent = true })           --> File > Tree
 map('n', '<space>fed', ':vsplit ~/.config/nvim/init.lua<CR>', { silent = true })             --> File > Editor > Definition
 map('n', '<space>fez', ':vsplit ~/.zshrc<CR>', { silent = true })                            --> File > Editor > ZSH
 map('n', '<space>fet', ':vsplit ~/.tmux.conf<CR>', { silent = true })                        --> File > Editor > Tmux
