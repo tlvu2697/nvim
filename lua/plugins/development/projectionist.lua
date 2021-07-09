@@ -7,7 +7,7 @@ cmd([[
 ]])
 
 g.projectionist_heuristics = {
-  ['*'] = {
+  ['*.rb'] = {
     ['app/*.rb'] = {
       alternate = 'spec/{}_spec.rb',
       type = 'source'
@@ -35,6 +35,8 @@ g.projectionist_heuristics = {
       },
       type = 'test'
     },
+  },
+  ['*.js'] = {
     ['*.js'] = {
       alternate = {
         '{dirname}/__tests__/{basename}.spec.js',

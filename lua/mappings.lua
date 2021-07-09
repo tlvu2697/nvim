@@ -46,13 +46,19 @@ map('n', '<space>fet', ':vsplit ~/.tmux.conf<CR>', { silent = true })           
 map('n', '<space>fer', ':Restart<CR>')                                                       --> File > Editor > Restart
 map('n', '<space>ff', ':Files %:p:h<CR>', { silent = true })                                 --> File > Find > File in Current Directory
 map('n', '<space>fh', ':History<CR>', { silent = true })                                     --> File > Find > File in History
-map('n', '<space>fc', ':saveas <C-R>=expand("%:p:h")<CR>/', { silent = true })               --> File > Copy
+map('n', '<space>fc', ':saveas <C-R>=expand("%:p:h")<CR>/')                                  --> File > Copy
 map('n', '<space>fyd', ':let @+=expand("%:h") | echo @+<CR>', { silent = true })             --> File > Yank > Directory Path
 map('n', '<space>fyy', ':let @+=expand("%") | echo @+<CR>', { silent = true })               --> File > Yank > Relative File Path
 map('n', '<space>fyl', ':let @+=expand("%").":".line(".") | echo @+<CR>', { silent = true }) --> File > Yank > Relative File Path with Line number
 map('n', '<space>fyY', ':let @+=expand("%:p") | echo @+<CR>', { silent = true })             --> File > Yank > Full File Path
 map('n', '<space>fyn', ':let @+=expand("%:t:r") | echo @+<CR>', { silent = true })           --> File > Yank > File Name without extension
 map('n', '<space>fyN', ':let @+=expand("%:t") | echo @+<CR>', { silent = true })             --> File > Yank > File Name with extension
+----------------------------------------------------
+-- SECTION: Session
+----------------------------------------------------
+map('n', '<space>sr', ':Obsess<CR>')                                --> Session > Recording
+map('n', '<space>sd', ':Obsess!<CR>')                               --> Session > Stop recording
+map('n', '<space>sl', ':source Session.vim<CR>', { silent = true }) --> Session > Load recording
 ----------------------------------------------------
 -- SECTION: Search
 ----------------------------------------------------

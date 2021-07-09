@@ -6,8 +6,8 @@ cmd([[
   call plug#end()
 ]])
 
-vim.cmd([[
-  augroup Obsession
-    autocmd VimEnter * Obsess
-  augroup END
-]])
+-- vim.cmd([[
+  -- augroup Obsession
+    -- autocmd VimEnter * Obsess
+  -- augroup END
+-- ]])
