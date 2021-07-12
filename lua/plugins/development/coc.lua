@@ -14,7 +14,6 @@ g.coc_global_extensions = {
   'coc-solargraph',
   'coc-snippets',
   'coc-sql',
-  'coc-tsserver',
   'coc-yaml',
 }
 

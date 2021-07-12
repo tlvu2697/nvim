@@ -5,7 +5,6 @@
 ----------------------------------------------------
 cmd([[
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'windwp/nvim-autopairs'
   Plug 'windwp/nvim-ts-autotag'
   call plug#end()
 ]])
@@ -23,14 +22,12 @@ require'nvim-treesitter.configs'.setup {
   },
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = false,
+    additional_vim_regex_highlighting = true,
   },
   indent = { enable = false },
-  autopairs = { enable = true },
   autotag = { enable = true },
 }
 
-require'nvim-autopairs'.setup {
-  check_ts = true,
-  enable_check_bracket_line = false,
-}
+-- require'nvim-autopairs'.setup {
+  -- check_ts = true,
+-- }

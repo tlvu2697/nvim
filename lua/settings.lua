@@ -25,6 +25,7 @@ opt.splitbelow = true
 opt.tabstop = 2
 opt.re = 1
 opt.wildmenu = true
+opt.wrap = true
 ----------------------------------------------------
 -- SECTION: Search
 ----------------------------------------------------
