@@ -9,5 +9,7 @@ cmd([[
   Plug 'godlygeek/tabular'
   Plug 'jiangmiao/auto-pairs'
   Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-unimpaired'
+  Plug 'tpope/vim-repeat'
   call plug#end()
 ]])

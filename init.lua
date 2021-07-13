@@ -6,6 +6,8 @@ require('settings')
 require('theme')
 require('mappings')
 
+require('plugins.shared')
+
 require('plugins.basic.base')
 require('plugins.basic.fzf')
 require('plugins.basic.maximizer')
