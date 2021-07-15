@@ -5,7 +5,6 @@
 ----------------------------------------------------
 cmd([[
   Plug 'honza/vim-snippets'
-  Plug 'tpope/vim-endwise'
   Plug 'tpope/vim-surround'
   call plug#end()
 ]])

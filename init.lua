@@ -10,6 +10,7 @@ require('plugins.shared')
 
 require('plugins.basic.base')
 require('plugins.basic.fzf')
+-- require('plugins.basic.telescope')
 require('plugins.basic.maximizer')
 require('plugins.basic.nerdcommenter')
 require('plugins.basic.obsession')
