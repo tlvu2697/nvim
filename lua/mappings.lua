@@ -82,20 +82,19 @@ map('n', '<space>bp', ':bprevious<CR>', { silent = true }) --> Previous Buffer
 -- SECTION: Git
 ----------------------------------------------------
 -- Buffer
-map('n', '<leader>gb', ':G blame<CR>', { silent = true })                                 --> Git Blame
-map('n', '<leader>gl', ':GBrowse<CR>', { silent = true })                                 --> Git Browse
-map('v', '<leader>gl', ":'<,'>GBrowse<CR>", { silent = true })                            --> Git Browse in Visual mode
-map('n', '<leader>ge', ':Gedit<CR>', { silent = true })                                   --> Git Edit
-map('n', '<leader>gc', ':BCommits<CR>', { silent = true })                                --> Git Buffer Commits
-map('n', '<leader>gvd', ':Gvdiffsplit<CR>', { silent = true })                            --> Git Diff
+map('n', '<leader>gb', ':G blame<CR>', { silent = true })        --> Git Blame
+map('n', '<leader>gl', ':GBrowse<CR>', { silent = true })        --> Git Browse
+map('v', '<leader>gl', ":'<,'>GBrowse<CR>", { silent = true })   --> Git Browse in Visual mode
+map('n', '<leader>ge', ':Gedit<CR>', { silent = true })          --> Git Edit
+map('n', '<leader>gc', ':BCommits<CR>', { silent = true })       --> Git Buffer Commits
+map('n', '<leader>gvd', ':Gvdiffsplit<CR>', { silent = true })   --> Git Diff
 -- Space
-map('n', '<space>gst', ':GFiles?<CR>', { silent = true })                                 --> Git Status
-map('n', '<space>gpr', ':Dispatch! source ~/.git_ci && create pr<CR>', { silent = true})  --> Git Create Pull Request
-map('n', '<space>grp', ':Dispatch! source ~/.git_ci && view repo<CR>', { silent = true }) --> Git View Repository
+map('n', '<space>gst', ':GFiles?<CR>', { silent = true })        --> Git Status
+map('n', '<space>gpr', ':TermGitCreatePR<CR>', { silent = true}) --> Git Create Pull Request
 ----------------------------------------------------
 -- SECTION: CircleCI
 ----------------------------------------------------
-map('n', '<space>cib', ':Dispatch! source ~/.git_ci && cib && sleep 1<CR>', { silent = true }) --> CircleCI for branch
+map('n', '<space>cib', ':TermCIBranch<CR>', { silent = true }) --> CircleCI for branch
 ----------------------------------------------------
 -- SECTION: Tesst
 ----------------------------------------------------

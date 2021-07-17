@@ -16,6 +16,7 @@ require('plugins.basic.nerdcommenter')
 require('plugins.basic.obsession')
 require('plugins.basic.tree')
 require('plugins.basic.treesitter')
+require('plugins.basic.toggleterm')
 
 require('plugins.development.base')
 require('plugins.development.better_whitespace')

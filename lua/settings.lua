@@ -6,7 +6,6 @@ g.loaded_ruby_provider = 0
 g.ruby_host_prog = '/usr/local/bin/_neovim-ruby-host'
 g.python_host_prog = '/usr/local/bin/_python2.7'
 g.python3_host_prog = '/usr/local/bin/_python3.6'
-g.shell = '/usr/bin/zsh'
 ----------------------------------------------------
 -- SECTION: General
 ----------------------------------------------------
