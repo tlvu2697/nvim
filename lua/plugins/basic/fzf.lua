@@ -2,12 +2,6 @@
 -- https://github.com/junegunn/fzf
 -- https://github.com/junegunn/fzf.vim
 ----------------------------------------------------
-cmd([[
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
-  call plug#end()
-]])
-
 env.FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!sorbet/rbi/*"'
 env.FZF_DEFAULT_OPTS = " --bind 'ctrl-d:preview-down,ctrl-u:preview-up'"
 g.fzf_layout = { down = '100%' }

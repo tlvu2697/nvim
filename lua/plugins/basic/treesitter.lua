@@ -3,13 +3,6 @@
 -- https://github.com/windwp/nvim-autopairs
 -- https://github.com/windwp/nvim-ts-autotag
 ----------------------------------------------------
-cmd([[
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-  Plug 'windwp/nvim-autopairs'
-  Plug 'windwp/nvim-ts-autotag'
-  call plug#end()
-]])
-
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     'bash',

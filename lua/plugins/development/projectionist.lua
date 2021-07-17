@@ -1,11 +1,6 @@
 ----------------------------------------------------
 -- https://github.com/tpope/vim-projectionist
 ----------------------------------------------------
-cmd([[
-  Plug 'tpope/vim-projectionist'
-  call plug#end()
-]])
-
 local rake = {
   ['lib/*.rake'] = {
     alternate = 'spec/lib/{}_rake_spec.rb',

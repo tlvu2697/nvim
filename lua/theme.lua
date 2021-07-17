@@ -2,10 +2,6 @@
 -- SECTION: Theme
 ----------------------------------------------------
 cmd([[
-  Plug 'itchyny/lightline.vim'
-  Plug 'joshdick/onedark.vim'
-  call plug#end()
-
   colorscheme onedark
 ]])
 

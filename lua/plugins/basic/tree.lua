@@ -1,11 +1,6 @@
 ----------------------------------------------------
 -- https://github.com/kyazdani42/nvim-tree.lua
 ----------------------------------------------------
-cmd([[
-  Plug 'kyazdani42/nvim-tree.lua'
-  call plug#end()
-]])
-
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 
 g.nvim_tree_disable_window_picker = 1

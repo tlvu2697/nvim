@@ -1,11 +1,6 @@
 ----------------------------------------------------
 -- https://github.com/neoclide/coc.nvim
 ----------------------------------------------------
-cmd([[
-  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-  call plug#end()
-]])
-
 g.coc_global_extensions = {
   'coc-eslint',
   'coc-json',

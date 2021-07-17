@@ -1,12 +1,7 @@
 ----------------------------------------------------
 -- https://github.com/akinsho/nvim-toggleterm.lua
 ----------------------------------------------------
-cmd([[
-  Plug 'akinsho/nvim-toggleterm.lua'
-  call plug#end()
-]])
-
-require("toggleterm").setup{}
+require('toggleterm').setup{}
 
 cmd([[
   command! -count=1 TermCIBranch lua require'toggleterm'.exec('source ~/.git_ci && cib && exit', <count>, 12)
