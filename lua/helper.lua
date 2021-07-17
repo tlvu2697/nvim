@@ -1,12 +1,19 @@
 ---------------------------------------------------
 -- https://neovim.io/doc/user/lua.html
 ---------------------------------------------------
+-- Global Variables
 cmd = vim.cmd -- Executes multiple lines of Vimscript at once
 fn  = vim.fn  -- Invokes |vim-function| or |user-function| {func} with arguments {...}
 g   = vim.g   -- Global (|g:|) editor variables
 env = vim.env -- Environment variables defined in the editor session
 opt = vim.opt -- Conveniences for setting and controlling options
+_G.open_in_browser = function(url)
+  local command = vim.loop.os_uname().sysname == 'Darwin' and 'open' or 'xdg-open'
+  require('plenary.job'):new({ command = command, args = { url } }):start()
+end
+_G.states = {}
 
+-- Functions
 function map(mode, lhs, rhs, opts)
   local options = { noremap = true }
   if opts then options = vim.tbl_extend('force', options, opts) end
@@ -38,13 +45,29 @@ function tablesMerge(...)
   return mergedTables
 end
 
+function sendEscape()
+  vim.api.nvim_feedkeys(
+    vim.api.nvim_replace_termcodes('<cr>', true, false, true),
+    'm',
+    true
+  )
+end
+
+function useToggle(key, truthy, falsy)
+  _G.states[key] = true
+
+  return function()
+    if _G.states[key] then
+      truthy()
+    else
+      falsy()
+    end
+
+    _G.states[key] = not _G.states[key]
+  end
+end
+
+-- Commands
 cmd([[
   command! -nargs=? Browse lua _G.open_in_browser(<q-args>)
 ]])
-
-local job = require('plenary.job')
-
-_G.open_in_browser = function(url)
-  local command = vim.loop.os_uname().sysname == 'Darwin' and 'open' or 'xdg-open'
-  job:new({ command = command, args = { url } }):start()
-end

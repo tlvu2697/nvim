@@ -1,6 +1,9 @@
 ----------------------------------------------------
 -- https://github.com/phaazon/hop.nvim
 ----------------------------------------------------
-require('hop').setup()
+require('hop').setup({
+  quit_key = '<Tab>'
+})
 
-vim.api.nvim_set_keymap('', '<Tab>', "<cmd>lua require'hop'.hint_words()<cr>", { silent = true })
+
+map('', '<Tab>', "<cmd>lua require'hop'.hint_words()<cr>", { silent = true })
