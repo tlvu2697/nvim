@@ -3,6 +3,8 @@
 -- https://github.com/windwp/nvim-autopairs
 -- https://github.com/windwp/nvim-ts-autotag
 ----------------------------------------------------
+-- SECTION: nvim-treesitter
+----------------------------------------------------
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     'bash',
@@ -20,32 +22,17 @@ require'nvim-treesitter.configs'.setup {
   },
   indent = { enable = false },
   autotag = { enable = true },
-  autopairs = {enable = true}
+  autopairs = { enable = true }
 }
-
-local remap = vim.api.nvim_set_keymap
+----------------------------------------------------
+-- SECTION: nvim-autopairs
+----------------------------------------------------
 local npairs = require('nvim-autopairs')
-
--- skip it, if you use another global object
-_G.MUtils= {}
-
-vim.g.completion_confirm_key = ""
-
-MUtils.completion_confirm=function()
-  if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()['selected'] ~= -1 then
-    vim.fn['coc#_select_confirm']()
-    return npairs.esc('<cr>')
-  else
-    return npairs.autopairs_cr()
-  end
-end
-
-
-remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
-
 
 npairs.setup({
   check_ts = true,
 })
 
+g.completion_confirm_key = ''
+map('i', '<CR>', 'v:lua.MUtils.completion_confirm()', { expr = true })
 npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))

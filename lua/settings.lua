@@ -37,3 +37,9 @@ opt.smartcase = true
 map('n', '<CR>', '<ESC>:noh<CR>', { silent = true})
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
+----------------------------------------------------
+-- SECTION: Commands
+----------------------------------------------------
+cmd([[
+  command! -nargs=? Browse lua _G.open_in_browser(<q-args>)
+]])
