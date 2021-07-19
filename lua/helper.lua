@@ -17,15 +17,6 @@ _G.MUtils.open_in_browser = function(url)
   local command = vim.loop.os_uname().sysname == 'Darwin' and 'open' or 'xdg-open'
   require('plenary.job'):new({ command = command, args = { url } }):start()
 end
-
-_G.MUtils.completion_confirm = function()
-  if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()['selected'] ~= -1 then
-    vim.fn['coc#_select_confirm']()
-    return npairs.esc('<cr>')
-  else
-    return npairs.autopairs_cr()
-  end
-end
 ----------------------------------------------------
 -- SECTION: Functions
 ----------------------------------------------------
