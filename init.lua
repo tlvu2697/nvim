@@ -9,7 +9,7 @@ require('plugins.basic.fzf')
 require('plugins.basic.maximizer')
 require('plugins.basic.nerdcommenter')
 require('plugins.basic.obsession')
-require('plugins.basic.tree')
+require('plugins.basic.nerdtree')
 require('plugins.basic.toggleterm')
 require('plugins.basic.treesitter')
 

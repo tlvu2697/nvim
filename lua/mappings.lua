@@ -1,31 +1,31 @@
 ----------------------------------------------------
 -- SECTION: Windows
 ----------------------------------------------------
-map('n', '<space>0', ':NvimTreeFindFile<CR>', { silent = true })            --> Window > Find
-map('n', '<space>1', ":exe 1 . 'wincmd w'<CR>", { silent = true })      --> Window 1
-map('n', '<space>2', ":exe 2 . 'wincmd w'<CR>", { silent = true })      --> Window 2
-map('n', '<space>3', ":exe 3 . 'wincmd w'<CR>", { silent = true })      --> Window 3
-map('n', '<space>4', ":exe 4 . 'wincmd w'<CR>", { silent = true })      --> Window 4
-map('n', '<space>5', ":exe 5 . 'wincmd w'<CR>", { silent = true })      --> Window 5
-map('n', '<space>6', ":exe 6 . 'wincmd w'<CR>", { silent = true })      --> Window 6
-map('n', '<space>7', ":exe 7 . 'wincmd w'<CR>", { silent = true })      --> Window 7
-map('n', '<space>8', ":exe 8 . 'wincmd w'<CR>", { silent = true })      --> Window 8
-map('n', '<space>9', ":exe 9 . 'wincmd w'<CR>", { silent = true })      --> Window 9
-map('n', '<space>wv', ':wincmd v<CR>', { silent = true })               --> Window Vertical
-map('n', '<space>ws', ':wincmd s<CR>', { silent = true })               --> Window Split
-map('n', '<space>w=', ':wincmd =<CR>', { silent = true })               --> Window Balance Area
-map('n', '<space>j', ':wincmd j<CR>', { silent = true })                --> Window Down
-map('n', '<space>k', ':wincmd k<CR>', { silent = true })                --> Window Up
-map('n', '<space>h', ':wincmd h<CR>', { silent = true })                --> Window Right
-map('n', '<space>l', ':wincmd l<CR>', { silent = true })                --> Window Left
-map('n', '<space>ww', ':wincmd w<CR>', { silent = true })               --> Other Window
-map('n', '<space>wr', ':wincmd r<CR>', { silent = true })               --> Rotate Window
-map('n', '<space>w<S-k>', ':wincmd <S-k><CR>', { silent = true })       --> Move Window Very Top
-map('n', '<space>w<S-j>', ':wincmd <S-j><CR>', { silent = true })       --> Move Window Very Bottom
-map('n', '<space>w<S-h>', ':wincmd <S-h><CR>', { silent = true })       --> Move Window Far Right
-map('n', '<space>w<S-l>', ':wincmd <S-l><CR>', { silent = true })       --> Move Window Far Left
-map('n', '<space>wm', ':MaximizerToggle<CR>', { silent = true })        --> Window Maximize
-map('v', '<space>wm', '<ESC>:MaximizerToggle<CR>gv', { silent = true }) --> Window Maximize
+map('n', '<space>0', ':NERDTreeFind<CR>', { silent = true })                              --> Window > Find
+map('n', '<space>1', ":exe 1 . 'wincmd w'<CR>", { silent = true })                        --> Window 1
+map('n', '<space>2', ":exe 2 . 'wincmd w'<CR>", { silent = true })                        --> Window 2
+map('n', '<space>3', ":exe 3 . 'wincmd w'<CR>", { silent = true })                        --> Window 3
+map('n', '<space>4', ":exe 4 . 'wincmd w'<CR>", { silent = true })                        --> Window 4
+map('n', '<space>5', ":exe 5 . 'wincmd w'<CR>", { silent = true })                        --> Window 5
+map('n', '<space>6', ":exe 6 . 'wincmd w'<CR>", { silent = true })                        --> Window 6
+map('n', '<space>7', ":exe 7 . 'wincmd w'<CR>", { silent = true })                        --> Window 7
+map('n', '<space>8', ":exe 8 . 'wincmd w'<CR>", { silent = true })                        --> Window 8
+map('n', '<space>9', ":exe 9 . 'wincmd w'<CR>", { silent = true })                        --> Window 9
+map('n', '<space>wv', ':wincmd v<CR>', { silent = true })                                 --> Window Vertical
+map('n', '<space>ws', ':wincmd s<CR>', { silent = true })                                 --> Window Split
+map('n', '<space>w=', ':wincmd =<CR>', { silent = true })                                 --> Window Balance Area
+map('n', '<space>j', ':wincmd j<CR>', { silent = true })                                  --> Window Down
+map('n', '<space>k', ':wincmd k<CR>', { silent = true })                                  --> Window Up
+map('n', '<space>h', ':wincmd h<CR>', { silent = true })                                  --> Window Right
+map('n', '<space>l', ':wincmd l<CR>', { silent = true })                                  --> Window Left
+map('n', '<space>ww', ':wincmd w<CR>', { silent = true })                                 --> Other Window
+map('n', '<space>wr', ':wincmd r<CR>', { silent = true })                                 --> Rotate Window
+map('n', '<space>w<S-k>', ':wincmd <S-k><CR>', { silent = true })                         --> Move Window Very Top
+map('n', '<space>w<S-j>', ':wincmd <S-j><CR>', { silent = true })                         --> Move Window Very Bottom
+map('n', '<space>w<S-h>', ':wincmd <S-h><CR>', { silent = true })                         --> Move Window Far Right
+map('n', '<space>w<S-l>', ':wincmd <S-l><CR>', { silent = true })                         --> Move Window Far Left
+map('n', '<space>wm', ':NERDTreeClose<CR>:MaximizerToggle<CR>', { silent = true })        --> Window Maximize
+map('v', '<space>wm', '<ESC>:NERDTreeClose<CR>:MaximizerToggle<CR>gv', { silent = true }) --> Window Maximize
 ----------------------------------------------------
 -- SECTION: Tabs
 ----------------------------------------------------
@@ -39,7 +39,7 @@ map('n', '<space><S-Tab>', 'gT', { silent = true })   --> Previous tab
 map('n', '<space><space>', '<ESC>:w<CR>', { silent = true })                                 --> File > Save
 map('n', '<space>q', '<ESC>:q<CR>', { silent = true })                                       --> File > Close
 map('n', '<space>wq', '<ESC>:wq<CR>', { silent = true })                                     --> File > Save & Close
-map('n', '<space>ft', ':NvimTreeToggle<CR>', { silent = true })           --> File > Tree
+map('n', '<space>ft', ':NERDTreeToggle<CR>', { silent = true })                              --> File > Tree
 map('n', '<space>fed', ':vsplit ~/.config/nvim/init.lua<CR>', { silent = true })             --> File > Editor > Definition
 map('n', '<space>fez', ':vsplit ~/.zshrc<CR>', { silent = true })                            --> File > Editor > ZSH
 map('n', '<space>fet', ':vsplit ~/.tmux.conf<CR>', { silent = true })                        --> File > Editor > Tmux

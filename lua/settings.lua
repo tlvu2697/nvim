@@ -13,7 +13,7 @@ cmd 'filetype plugin indent on'
 opt.autoindent = true
 opt.autoread = true
 opt.clipboard = { 'unnamed', 'unnamedplus' }
-opt.cursorline = true
+opt.cursorline = false
 opt.expandtab = true
 opt.number = true
 opt.relativenumber = true

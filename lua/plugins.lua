@@ -21,7 +21,7 @@ return require('packer').startup(function()
   use 'preservim/nerdcommenter'
   use 'tpope/vim-obsession'
   use 'akinsho/nvim-toggleterm.lua'
-  use 'kyazdani42/nvim-tree.lua'
+  use 'preservim/nerdtree'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
