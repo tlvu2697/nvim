@@ -42,5 +42,5 @@ map('n', 'N', 'Nzzzv')
 -- SECTION: Commands
 ----------------------------------------------------
 cmd([[
-  command! -nargs=? Browse lua _G.open_in_browser(<q-args>)
+  command! -nargs=? Browse lua _G.MUtils.open_in_browser(<q-args>)
 ]])
