@@ -30,7 +30,7 @@ map('v', '<space>wm', '<ESC>:MaximizerToggle<CR>gv', { silent = true }) --> Wind
 -- SECTION: Tabs
 ----------------------------------------------------
 map('n', '<C-t>', ':tabnew<CR>', { silent = true })   --> New tab
-map('n', '<C-w>', ':tabclose<CR>', { silent = true }) --> New tab
+-- map('n', '<C-w>', ':tabclose<CR>', { silent = true }) --> Close tab
 map('n', '<space><Tab>', 'gt', { silent = true })     --> Next tab
 map('n', '<space><S-Tab>', 'gT', { silent = true })   --> Previous tab
 ----------------------------------------------------

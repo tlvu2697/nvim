@@ -26,6 +26,7 @@ opt.tabstop = 2
 opt.re = 1
 opt.wildmenu = true
 opt.wrap = true
+vim.wo.wrap = true
 ----------------------------------------------------
 -- SECTION: Search
 ----------------------------------------------------

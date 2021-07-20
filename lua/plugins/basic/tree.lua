@@ -11,7 +11,7 @@ g.nvim_tree_show_icons = {
   folder_arrows = 1,
 }
 
-local mc_cb = tree_cb('copy') .. tree_cb('paste') .. '<cmd>call feedkeys("r")<CR>'
+local mc_cb = tree_cb('copy') .. tree_cb('paste')
 
 g.nvim_tree_bindings = {
   { key = 'v',  cb = tree_cb('vsplit') },
