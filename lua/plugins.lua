@@ -10,46 +10,48 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim'
 
   -- Basic
+  use 'akinsho/nvim-toggleterm.lua'
+  use 'benmills/vimux'
   use 'famiu/nvim-reload'
   use 'godlygeek/tabular'
-  use 'jiangmiao/auto-pairs'
-  use 'tpope/vim-unimpaired'
-  use 'tpope/vim-repeat'
-  use { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end }
+  use {
+    'junegunn/fzf',
+    run = function() vim.fn['fzf#install']() end
+  }
   use 'junegunn/fzf.vim'
-  use 'szw/vim-maximizer'
-  use 'preservim/nerdcommenter'
-  use 'tpope/vim-obsession'
-  use 'akinsho/nvim-toggleterm.lua'
-  use 'preservim/nerdtree'
+  use 'matze/vim-move'
+  use 'ntpeters/vim-better-whitespace'
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
     requires = { 'windwp/nvim-autopairs', 'windwp/nvim-ts-autotag' }
   }
+  use 'preservim/nerdcommenter'
+  use 'preservim/nerdtree'
+  use 'szw/vim-maximizer'
+  use 'tpope/vim-obsession'
+  use 'tpope/vim-projectionist'
+  use 'tpope/vim-repeat'
+  use 'tpope/vim-surround'
+  use 'tpope/vim-unimpaired'
+  use 'phaazon/hop.nvim'
 
 
   -- Development
-  use 'honza/vim-snippets'
-  use 'tpope/vim-surround'
-  use 'ntpeters/vim-better-whitespace'
-  use { 'neoclide/coc.nvim', branch = 'release' }
-  use 'ludovicchabant/vim-gutentags'
-  use 'phaazon/hop.nvim'
-  use 'matze/vim-move'
-  use 'meain/vim-printer'
-  use 'tpope/vim-projectionist'
   use 'AndrewRadev/splitjoin.vim'
+  use 'honza/vim-snippets'
+  use 'ludovicchabant/vim-gutentags'
+  use 'meain/vim-printer'
+  use { 'neoclide/coc.nvim', branch = 'release' }
   use 'vim-test/vim-test'
-  use 'benmills/vimux'
 
 
   -- GIT
   use 'junegunn/gv.vim'
+  use 'kdheepak/lazygit.nvim'
+  use 'lewis6991/gitsigns.nvim'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
-  use 'lewis6991/gitsigns.nvim'
-  use 'kdheepak/lazygit.nvim'
 
 
   -- Languages

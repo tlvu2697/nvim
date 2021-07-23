@@ -27,14 +27,10 @@ require'nvim-treesitter.configs'.setup {
 ----------------------------------------------------
 -- SECTION: nvim-autopairs
 ----------------------------------------------------
+g.completion_confirm_key = ''
 
 local npairs = require('nvim-autopairs')
-npairs.setup({
-  check_ts = true,
-})
-npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))
-
-g.completion_confirm_key = ''
+local Rule   = require('nvim-autopairs.rule')
 
 _G.MUtils.completion_confirm = function()
   if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()['selected'] ~= -1 then
@@ -43,5 +39,35 @@ _G.MUtils.completion_confirm = function()
 
   return npairs.autopairs_cr()
 end
-
 map('i', '<CR>', 'v:lua._G.MUtils.completion_confirm()', { expr = true })
+
+
+npairs.setup({
+  check_ts = true,
+})
+npairs.add_rules(require('nvim-autopairs.rules.endwise-ruby'))
+npairs.add_rules {
+  Rule(' ', ' ')
+    :with_pair(function (opts)
+      local pair = opts.line:sub(opts.col, opts.col + 1)
+      return vim.tbl_contains({ '()', '[]', '{}' }, pair)
+    end),
+  Rule('( ', ' )')
+      :with_pair(function() return false end)
+      :with_move(function(opts)
+          return opts.prev_char:match('.%)') ~= nil
+      end)
+      :use_key(')'),
+  Rule('{ ', ' }')
+      :with_pair(function() return false end)
+      :with_move(function(opts)
+          return opts.prev_char:match('.%}') ~= nil
+      end)
+      :use_key('}'),
+  Rule('[ ', ' ]')
+      :with_pair(function() return false end)
+      :with_move(function(opts)
+          return opts.prev_char:match('.%]') ~= nil
+      end)
+      :use_key(']')
+}
