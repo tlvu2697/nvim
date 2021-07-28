@@ -37,6 +37,7 @@ map('n', '<space><S-Tab>', 'gT', { silent = true })   --> Previous tab
 -- SECTION: Files
 ----------------------------------------------------
 map('n', '<space><space>', '<ESC>:w<CR>', { silent = true })                                 --> File > Save
+map('n', '<space>e', '<ESC>:e<CR>', { silent = true })                                       --> File > Refresh
 map('n', '<space>q', '<ESC>:q<CR>', { silent = true })                                       --> File > Close
 map('n', '<space>wq', '<ESC>:wq<CR>', { silent = true })                                     --> File > Save & Close
 map('n', '<space>ft', ':NERDTreeToggle<CR>', { silent = true })                              --> File > Tree

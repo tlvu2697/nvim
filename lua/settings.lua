@@ -6,6 +6,7 @@ g.loaded_ruby_provider = 0
 g.ruby_host_prog = '/usr/local/bin/_neovim-ruby-host'
 g.python_host_prog = '/usr/local/bin/_python2.7'
 g.python3_host_prog = '/usr/local/bin/_python3.6'
+g.loaded_matchit = 1
 ----------------------------------------------------
 -- SECTION: General
 ----------------------------------------------------
@@ -23,7 +24,7 @@ opt.softtabstop = 2
 opt.splitright = true
 opt.splitbelow = true
 opt.tabstop = 2
-opt.re = 1
+opt.re = 0
 opt.wildmenu = true
 opt.wrap = true
 vim.wo.wrap = true

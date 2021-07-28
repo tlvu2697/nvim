@@ -24,7 +24,12 @@ return require('packer').startup(function()
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    requires = { 'windwp/nvim-autopairs', 'windwp/nvim-ts-autotag' }
+    requires = {
+      'andymass/vim-matchup',
+      'windwp/nvim-autopairs',
+      'windwp/nvim-ts-autotag',
+      'nvim-treesitter/playground'
+    }
   }
   use 'preservim/nerdcommenter'
   use 'preservim/nerdtree'
