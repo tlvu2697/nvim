@@ -1,5 +1,6 @@
 ----------------------------------------------------
 -- https://github.com/nvim-treesitter/nvim-treesitter
+-- https://github.com/andymass/vim-matchup
 -- https://github.com/windwp/nvim-autopairs
 -- https://github.com/windwp/nvim-ts-autotag
 ----------------------------------------------------
@@ -21,14 +22,15 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
     additional_vim_regex_highlighting = false,
   },
-  indent = {
-    enable = true,
-    disable = { 'ruby', 'lua' }
-  },
+  indent = { enable = false },
   autotag = { enable = true },
   autopairs = { enable = true },
   matchup = { enable = true },
 }
+----------------------------------------------------
+-- SECTION: vim-matchup
+----------------------------------------------------
+g.matchup_matchparen_offscreen = { method = 'none' }
 ----------------------------------------------------
 -- SECTION: nvim-autopairs
 ----------------------------------------------------
@@ -36,10 +38,7 @@ g.completion_confirm_key = ''
 
 local npairs = require('nvim-autopairs')
 local Rule   = require('nvim-autopairs.rule')
-
-npairs.setup({
-  check_ts = true,
-})
+npairs.setup({ check_ts = true })
 
 _G.MUtils.completion_confirm = function()
   if vim.fn.pumvisible() ~= 0 and vim.fn.complete_info()['selected'] ~= -1 then
