@@ -3,7 +3,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'itchyny/lightline.vim'
+  use 'hoob3rt/lualine.nvim'
   use 'joshdick/onedark.vim'
 
   -- Dependencies
