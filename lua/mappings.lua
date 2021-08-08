@@ -97,7 +97,7 @@ map('n', '<space>gpr', ':TermGitCreatePR<CR>', { silent = true}) --> Git Create 
 ----------------------------------------------------
 map('n', '<space>cib', ':TermCIBranch<CR>', { silent = true }) --> CircleCI for branch
 ----------------------------------------------------
--- SECTION: Tesst
+-- SECTION: Test
 ----------------------------------------------------
 map('n', '<leader>tb', ':TestFile<CR>', { silent = true })    --> Run test buffer
 map('n', '<leader>tt', ':TestNearest<CR>', { silent = true }) --> Run test at point
