@@ -119,3 +119,4 @@ map('', '<space>P', '"0P', { silent = true })              --> Paste from regist
 -- SECTION: Misc
 ----------------------------------------------------
 map('n', 'K', 'i<CR><ESC>', { silent = true }) --> Break line at cursor
+map('', '$', 'g_', { silent = true })          --> Skip linebreak

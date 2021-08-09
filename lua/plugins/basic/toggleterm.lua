@@ -1,7 +1,7 @@
 ----------------------------------------------------
 -- https://github.com/akinsho/nvim-toggleterm.lua
 ----------------------------------------------------
-require("toggleterm").setup{
+require('toggleterm').setup{
   size = 12,
   open_mapping = [[<c-\>]],
   shade_terminals = false,
