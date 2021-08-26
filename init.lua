@@ -26,3 +26,4 @@ require('plugins.development.test')
 
 require('plugins.git.gitsigns')
 require('plugins.git.lazygit')
+require('plugins.git.diffview')

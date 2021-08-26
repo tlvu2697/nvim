@@ -55,6 +55,7 @@ return require('packer').startup(function()
   use 'junegunn/gv.vim'
   use 'kdheepak/lazygit.nvim'
   use 'lewis6991/gitsigns.nvim'
+  use 'sindrets/diffview.nvim'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
 
