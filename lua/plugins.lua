@@ -32,7 +32,13 @@ return require('packer').startup(function()
     }
   }
   use 'preservim/nerdcommenter'
-  use 'preservim/nerdtree'
+  use {
+    'preservim/nerdtree',
+    requires = {
+      'Xuyuanp/nerdtree-git-plugin'
+    }
+  }
+
   use 'szw/vim-maximizer'
   use 'tpope/vim-obsession'
   use 'tpope/vim-projectionist'
