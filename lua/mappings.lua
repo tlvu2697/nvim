@@ -58,9 +58,10 @@ map('n', '<space>fyN', ':let @+=expand("%:t") | echo @+<CR>', { silent = true })
 ----------------------------------------------------
 -- SECTION: Session
 ----------------------------------------------------
-map('n', '<space>sr', ':Obsess<CR>')                                --> Session > Recording
-map('n', '<space>sd', ':Obsess!<CR>')                               --> Session > Stop recording
-map('n', '<space>sl', ':source Session.vim<CR>', { silent = true }) --> Session > Load recording
+map('n', '<space>sr', ':Obsess<CR>')                                            --> Session > Record
+map('n', '<space>sd', ':Obsess!<CR>')                                           --> Session > Delete
+map('n', '<space>sq', ':Obsess<CR>:qa!<CR>')                                    --> Session > Record & Quit
+map('n', '<space>sl', ':source Session.vim<CR>:Obsess!<CR>', { silent = true }) --> Session > Load last session
 ----------------------------------------------------
 -- SECTION: Search
 ----------------------------------------------------
