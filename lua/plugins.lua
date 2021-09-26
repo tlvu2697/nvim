@@ -52,7 +52,6 @@ return require('packer').startup(function()
   use 'AndrewRadev/splitjoin.vim'
   use 'honza/vim-snippets'
   use 'ludovicchabant/vim-gutentags'
-  use 'meain/vim-printer'
   use { 'neoclide/coc.nvim', branch = 'release' }
   use 'vim-test/vim-test'
 

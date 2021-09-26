@@ -20,7 +20,6 @@ require('plugins.basic.vimux')
 
 require('plugins.development.coc')
 require('plugins.development.gutentags')
-require('plugins.development.printer')
 require('plugins.development.splitjoin')
 require('plugins.development.test')
 

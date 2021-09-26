@@ -67,6 +67,7 @@ cmd([[
   nmap <silent> gdd <Plug>(coc-definition)
   nmap <silent> gdv :call CocAction('jumpDefinition', 'vsplit') <CR>
   nmap <silent> gds :call CocAction('jumpDefinition', 'split') <CR>
+  nmap <silent> gdt :call CocAction('jumpDefinition', 'tabedit') <CR>
   nmap <silent> gy <Plug>(coc-type-definition)
   nmap <silent> gi <Plug>(coc-implementation)
   nmap <silent> gr <Plug>(coc-references)

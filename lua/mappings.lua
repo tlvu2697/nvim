@@ -41,6 +41,7 @@ map('n', '<space>e', '<ESC>:e<CR>', { silent = true })                          
 map('n', '<space>q', '<ESC>:q<CR>', { silent = true })                                       --> File > Close
 map('n', '<space>wq', '<ESC>:wq<CR>', { silent = true })                                     --> File > Save & Close
 map('n', '<space>ft', ':NERDTreeToggle<CR>', { silent = true })                              --> File > Tree
+map('n', '<space>fec', ':vsplit config/application.yml<CR>', { silent = true })              --> File > Editor > Rails application.yml
 map('n', '<space>fed', ':vsplit ~/.config/nvim/init.lua<CR>', { silent = true })             --> File > Editor > Definition
 map('n', '<space>fez', ':vsplit ~/.zshrc<CR>', { silent = true })                            --> File > Editor > ZSH
 map('n', '<space>fet', ':vsplit ~/.tmux.conf<CR>', { silent = true })                        --> File > Editor > Tmux
@@ -65,7 +66,10 @@ map('n', '<space>sl', ':source Session.vim<CR>', { silent = true }) --> Session 
 ----------------------------------------------------
 -- Buffer
 map('n', '<leader>/', ':BLines<CR>', { silent = true })
-map('v', '*', "y/\\V<C-R>=escape(@\",'/\\')<CR><CR>", { silent = true })
+map('v', '#', "y/\\V<C-R>=escape(@\",'/\\')<CR><CR>", { silent = true })
+map('v', '*', "y?\\V<C-R>=escape(@\",'/\\')<CR><CR>", { silent = true })
+map('n', '#', "/\\<<C-R>=expand('<cword>')<CR>\\><CR>", { silent = true })
+map('n', '*', "?\\<<C-R>=expand('<cword>')<CR>\\><CR>", { silent = true })
 -- Space
 map('n', '<space>/', ':Rg<space>')
 map('n', '<space>su', ':Rg<up><CR>', { silent = true })
