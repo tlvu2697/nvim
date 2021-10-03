@@ -125,3 +125,5 @@ map('', '<space>P', '"0P', { silent = true })              --> Paste from regist
 ----------------------------------------------------
 map('n', 'K', 'i<CR><ESC>', { silent = true }) --> Break line at cursor
 map('', '$', 'g_', { silent = true })          --> Skip linebreak
+map('', 'q', '<Nop>', { silent = true })       --> Disable Command History
+map('', 'Q', '<Nop>', { silent = true })       --> Disable Ex mode
