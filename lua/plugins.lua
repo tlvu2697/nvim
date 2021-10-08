@@ -19,6 +19,7 @@ return require('packer').startup(function()
     run = function() vim.fn['fzf#install']() end
   }
   use 'junegunn/fzf.vim'
+  use 'lukas-reineke/indent-blankline.nvim'
   use 'matze/vim-move'
   use 'ntpeters/vim-better-whitespace'
   use {
@@ -38,7 +39,6 @@ return require('packer').startup(function()
       'Xuyuanp/nerdtree-git-plugin'
     }
   }
-
   use 'szw/vim-maximizer'
   use 'tpope/vim-obsession'
   use 'tpope/vim-projectionist'
