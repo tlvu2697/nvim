@@ -20,6 +20,9 @@
   "solargraph.checkGemVersion": false,
   "solargraph.symbols": false,
 
+  "eslint.autoFixOnSave": true,
+  "eslint.run": "onSave",
+
   "yaml.format.enable": true,
 
   "javascript.suggestionActions.enabled": false,
