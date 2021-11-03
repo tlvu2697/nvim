@@ -1,9 +1,12 @@
 return require('packer').startup(function()
+  use 'lewis6991/impatient.nvim'
+  require('impatient')
+
   -- Self
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'hoob3rt/lualine.nvim'
+  use 'nvim-lualine/lualine.nvim'
   use 'joshdick/onedark.vim'
 
   -- Dependencies
@@ -13,12 +16,13 @@ return require('packer').startup(function()
   use 'akinsho/nvim-toggleterm.lua'
   use 'benmills/vimux'
   use 'famiu/nvim-reload'
-  use 'godlygeek/tabular'
+  use 'gcmt/taboo.vim'
   use {
     'junegunn/fzf',
     run = function() vim.fn['fzf#install']() end
   }
   use 'junegunn/fzf.vim'
+  use 'junegunn/vim-easy-align'
   use 'lukas-reineke/indent-blankline.nvim'
   use 'matze/vim-move'
   use 'ntpeters/vim-better-whitespace'

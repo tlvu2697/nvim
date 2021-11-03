@@ -1,3 +1,5 @@
+local start_time = vim.fn.reltime()
+
 require('plugins')
 
 require('helper')
@@ -6,6 +8,7 @@ require('theme')
 require('mappings')
 
 require('plugins.basic.better_whitespace')
+require('plugins.basic.easy_align')
 require('plugins.basic.fzf')
 require('plugins.basic.hop')
 require('plugins.basic.indent_blankline')
@@ -15,6 +18,7 @@ require('plugins.basic.nerdcommenter')
 require('plugins.basic.obsession')
 require('plugins.basic.nerdtree')
 require('plugins.basic.projectionist')
+require('plugins.basic.taboo')
 require('plugins.basic.toggleterm')
 require('plugins.basic.treesitter')
 require('plugins.basic.vimux')
@@ -27,3 +31,5 @@ require('plugins.development.test')
 require('plugins.git.diffview')
 require('plugins.git.gitsigns')
 require('plugins.git.lazygit')
+
+print(vim.fn.printf('Loaded [%.0fms]', vim.fn.reltimefloat(vim.fn.reltime(start_time))*1000))
