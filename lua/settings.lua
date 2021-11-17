@@ -10,14 +10,7 @@ g.loaded_matchit = 1
 ----------------------------------------------------
 -- SECTION: General
 ----------------------------------------------------
-cmd([[
-  filetype plugin indent on
-
-  augroup AutoreadFix
-    autocmd!
-    autocmd BufWritePost * edit
-  augroup END
-]])
+cmd 'filetype plugin indent on'
 opt.autoindent = true
 opt.autoread = true
 opt.clipboard = { 'unnamed', 'unnamedplus' }
