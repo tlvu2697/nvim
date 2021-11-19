@@ -9,6 +9,7 @@ opt.background = 'dark'
 opt.encoding = 'UTF-8'
 opt.laststatus = 2
 opt.termguicolors = true
+opt.showmode = false
 
 g.lightline = {
   colorscheme = 'onedark',

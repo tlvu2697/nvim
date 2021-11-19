@@ -14,21 +14,6 @@ g.coc_global_extensions = {
 }
 
 ----------------------------------------------------
--- SECTION: Basic settings
-----------------------------------------------------
-cmd([[
-  set nobackup
-  set nowritebackup
-  set updatetime=100
-  set shortmess+=c
-  if has('patch-8.1.1564')
-    set signcolumn=number
-  else
-    set signcolumn=yes
-  endif
-]])
-
-----------------------------------------------------
 -- SECTION: <TAB> for Completion
 ----------------------------------------------------
 cmd([[

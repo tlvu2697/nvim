@@ -1,3 +1,12 @@
+local disabled_built_ins = {
+  'netrw', 'netrwPlugin', 'netrwSettings', 'netrwFileHandlers',
+  'gzip', 'zip', 'zipPlugin', 'tar', 'tarPlugin', 'getscript',
+  'getscriptPlugin', 'vimball', 'vimballPlugin', '2html_plugin',
+  'logipat', 'rrhelper', 'spellfile_plugin', 'matchit',
+}
+for _, plugin in pairs(disabled_built_ins) do
+   g["loaded_" .. plugin] = 1
+end
 ----------------------------------------------------
 -- SECTION: Important
 ----------------------------------------------------
@@ -6,28 +15,34 @@ g.loaded_ruby_provider = 0
 g.ruby_host_prog = '/usr/local/bin/_neovim-ruby-host'
 g.python_host_prog = '/usr/local/bin/_python2.7'
 g.python3_host_prog = '/usr/local/bin/_python3.6'
-g.loaded_matchit = 1
 ----------------------------------------------------
 -- SECTION: General
 ----------------------------------------------------
 cmd 'filetype plugin indent on'
+opt.swapfile = false
 opt.autoindent = true
+opt.smartindent = true
 opt.autoread = true
 opt.clipboard = { 'unnamed', 'unnamedplus' }
 opt.cursorline = false
 opt.expandtab = true
 opt.number = true
 opt.relativenumber = true
+opt.tabstop = 8
 opt.shiftwidth = 2
-opt.smartindent = true
 opt.softtabstop = 2
 opt.splitright = true
 opt.splitbelow = true
-opt.tabstop = 2
 opt.re = 0
 opt.wildmenu = true
 opt.wrap = true
 vim.wo.wrap = true
+opt.backup = false
+opt.writebackup = false
+opt.updatetime = 100
+opt.signcolumn = 'yes'
+opt.shortmess:append { c = true }
+opt.switchbuf:append { 'useopen' }
 ----------------------------------------------------
 -- SECTION: Search
 ----------------------------------------------------
