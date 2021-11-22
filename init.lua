@@ -32,4 +32,6 @@ require('plugins.git.diffview')
 require('plugins.git.gitsigns')
 require('plugins.git.lazygit')
 
+require('plugins.languages.import_js')
+
 print(vim.fn.printf('Loaded [%.0fms]', vim.fn.reltimefloat(vim.fn.reltime(start_time))*1000))
