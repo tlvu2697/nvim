@@ -6,8 +6,8 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Theme
+  use 'navarasu/onedark.nvim'
   use 'nvim-lualine/lualine.nvim'
-  use 'joshdick/onedark.vim'
 
   -- Dependencies
   use 'nvim-lua/plenary.nvim'
@@ -23,7 +23,6 @@ return require('packer').startup(function()
   }
   use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
-  use 'lukas-reineke/indent-blankline.nvim'
   use 'matze/vim-move'
   use 'ntpeters/vim-better-whitespace'
   use {

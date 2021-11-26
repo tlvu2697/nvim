@@ -55,6 +55,15 @@ map('n', '<CR>', '<ESC>:noh<CR>', { silent = true})
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 ----------------------------------------------------
+-- SECTION: Folding
+----------------------------------------------------
+opt.foldenable = true
+opt.foldlevelstart = 5
+opt.foldnestmax = 5
+opt.foldmethod= 'indent'
+-- opt.foldexpr= 'nvim_treesitter#foldexpr()'
+map('n', 'zV', ':normal zMzvzz<CR>')
+----------------------------------------------------
 -- SECTION: Commands
 ----------------------------------------------------
 cmd([[
