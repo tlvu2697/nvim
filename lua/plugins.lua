@@ -1,4 +1,4 @@
-return require('packer').startup(function()
+return require('packer').startup({function()
   use 'lewis6991/impatient.nvim'
   require('impatient')
 
@@ -6,7 +6,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'navarasu/onedark.nvim'
+  use 'christianchiarulli/nvcode-color-schemes.vim'
   use 'nvim-lualine/lualine.nvim'
 
   -- Dependencies
@@ -49,6 +49,7 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use 'phaazon/hop.nvim'
+  use 'tanvirtin/vgit.nvim'
 
 
   -- Development
@@ -63,7 +64,6 @@ return require('packer').startup(function()
   use 'junegunn/gv.vim'
   use 'kdheepak/lazygit.nvim'
   use 'lewis6991/gitsigns.nvim'
-  use 'sindrets/diffview.nvim'
   use 'tpope/vim-fugitive'
   use 'tpope/vim-rhubarb'
 
@@ -71,4 +71,11 @@ return require('packer').startup(function()
   -- Languages
   use 'galooshi/vim-import-js'
   use 'pangloss/vim-javascript'
-end)
+
+
+  -- Unused
+  -- use 'sindrets/diffview.nvim'
+  -- use 'lukas-reineke/indent-blankline.nvim'
+end, config = {
+    compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
+}})

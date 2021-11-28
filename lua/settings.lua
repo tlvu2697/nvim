@@ -1,10 +1,9 @@
-local disabled_built_ins = {
+for _, plugin in pairs({
   'netrw', 'netrwPlugin', 'netrwSettings', 'netrwFileHandlers',
   'gzip', 'zip', 'zipPlugin', 'tar', 'tarPlugin', 'getscript',
   'getscriptPlugin', 'vimball', 'vimballPlugin', '2html_plugin',
   'logipat', 'rrhelper', 'spellfile_plugin', 'matchit',
-}
-for _, plugin in pairs(disabled_built_ins) do
+}) do
    g["loaded_" .. plugin] = 1
 end
 ----------------------------------------------------
@@ -66,6 +65,4 @@ map('n', 'zV', ':normal zMzvzz<CR>')
 ----------------------------------------------------
 -- SECTION: Commands
 ----------------------------------------------------
-cmd([[
-  command! -nargs=? Browse lua _G.MUtils.open_in_browser(<q-args>)
-]])
+cmd 'command! -nargs=? Browse lua _G.MUtils.open_in_browser(<q-args>)'

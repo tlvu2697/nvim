@@ -37,14 +37,12 @@ cmd([[
 -- SECTION: Remap <C-j> and <C-k> for scroll float windows/popups.
 ----------------------------------------------------
 cmd([[
-  if has('nvim-0.4.0') || has('patch-8.2.0750')
-    nnoremap <silent><nowait><expr> <C-j> coc#float#has_scroll() ? coc#float#scroll(1, 2) : "\<C-j>"
-    nnoremap <silent><nowait><expr> <C-k> coc#float#has_scroll() ? coc#float#scroll(0, 2) : "\<C-k>"
-    inoremap <silent><nowait><expr> <C-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1, 2)\<cr>" : "\<Right>"
-    inoremap <silent><nowait><expr> <C-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0, 2)\<cr>" : "\<Left>"
-    vnoremap <silent><nowait><expr> <C-j> coc#float#has_scroll() ? coc#float#scroll(1, 2) : "\<C-j>"
-    vnoremap <silent><nowait><expr> <C-k> coc#float#has_scroll() ? coc#float#scroll(0, 2) : "\<C-k>"
-  endif
+  nnoremap <silent><nowait><expr> <C-j> coc#float#has_scroll() ? coc#float#scroll(1, 2) : "\<C-j>"
+  nnoremap <silent><nowait><expr> <C-k> coc#float#has_scroll() ? coc#float#scroll(0, 2) : "\<C-k>"
+  inoremap <silent><nowait><expr> <C-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1, 2)\<cr>" : "\<Right>"
+  inoremap <silent><nowait><expr> <C-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0, 2)\<cr>" : "\<Left>"
+  vnoremap <silent><nowait><expr> <C-j> coc#float#has_scroll() ? coc#float#scroll(1, 2) : "\<C-j>"
+  vnoremap <silent><nowait><expr> <C-k> coc#float#has_scroll() ? coc#float#scroll(0, 2) : "\<C-k>"
 ]])
 
 ----------------------------------------------------
@@ -61,23 +59,13 @@ cmd([[
 ]])
 
 ----------------------------------------------------
--- SECTION: Code Formatting
+-- SECTION: Code Formatting & Fixing
 ----------------------------------------------------
 cmd([[
   vmap <leader>f <Plug>(coc-format-selected)
   nmap <leader>f <Plug>(coc-format-selected)
   nmap <silent> <leader>ff :call CocAction('format')<CR>
-  augroup mygroup
-    autocmd!
-    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-  augroup end
-]])
 
-----------------------------------------------------
--- SECTION: Code Fixing
-----------------------------------------------------
-cmd([[
   nmap <silent> <leader>ac <Plug>(coc-codeaction)
   nmap <silent> <leader>ef :CocFix<CR>
 ]])
@@ -87,7 +75,6 @@ cmd([[
 ----------------------------------------------------
 cmd([[
   command! -nargs=0 Format :call CocAction('format')
-  command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
   nnoremap <silent><nowait> <space>ca :<C-u>CocList diagnostics<cr>
   nnoremap <silent><nowait> <space>ce :<C-u>CocList extensions<cr>
