@@ -6,7 +6,7 @@ return require('packer').startup({function()
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'christianchiarulli/nvcode-color-schemes.vim'
+  use 'joshdick/onedark.vim'
   use 'nvim-lualine/lualine.nvim'
 
   -- Dependencies
