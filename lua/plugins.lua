@@ -43,7 +43,6 @@ return require('packer').startup({function()
     }
   }
   use 'szw/vim-maximizer'
-  use 'tpope/vim-obsession'
   use 'tpope/vim-projectionist'
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
@@ -76,6 +75,7 @@ return require('packer').startup({function()
   -- Unused
   -- use 'sindrets/diffview.nvim'
   -- use 'lukas-reineke/indent-blankline.nvim'
+  -- use 'tpope/vim-obsession'
 end, config = {
     compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
 }})
