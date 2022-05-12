@@ -60,6 +60,42 @@ local javascript = {
   }
 }
 
+local typescript = {
+  ['*.ts'] = {
+    alternate = {
+      '{dirname}/__tests__/{basename}.spec.ts',
+      '{dirname}/__tests__/integration.spec.ts'
+    },
+    type = 'source'
+  },
+  ['*/integration.spec.ts'] = {
+    alternate = '{dirname}/index.ts',
+    type = 'test'
+  },
+  ['*.spec.ts'] = {
+    alternate = '{dirname}/../{basename}.ts',
+    type = 'test'
+  }
+}
+
+local typescriptreact = {
+  ['*.tsx'] = {
+    alternate = {
+      '{dirname}/__tests__/{basename}.spec.tsx',
+      '{dirname}/__tests__/integration.spec.tsx'
+    },
+    type = 'source'
+  },
+  ['*/integration.spec.tsx'] = {
+    alternate = '{dirname}/index.tsx',
+    type = 'test'
+  },
+  ['*.spec.tsx'] = {
+    alternate = '{dirname}/../{basename}.tsx',
+    type = 'test'
+  }
+}
+
 g.projectionist_heuristics = {
   ['*'] = tablesMerge(
     rake,
