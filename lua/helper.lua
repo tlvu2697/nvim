@@ -58,3 +58,9 @@ function sendEscape()
     true
   )
 end
+
+function requireAllAt(path)
+  for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath('config')..'/lua/plugins/'..path, [[v:val =~ '\.lua$']])) do
+    require('plugins.'..path..'.'..file:gsub('%.lua$', ''))
+  end
+end

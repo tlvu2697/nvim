@@ -11,6 +11,7 @@ return require('packer').startup({function()
 
   -- Dependencies
   use 'nvim-lua/plenary.nvim'
+  use 'mrjones2014/load-all.nvim'
 
   -- Basic
   use 'akinsho/nvim-toggleterm.lua'
@@ -23,6 +24,7 @@ return require('packer').startup({function()
   }
   use 'junegunn/fzf.vim'
   use 'junegunn/vim-easy-align'
+  use 'lukas-reineke/indent-blankline.nvim'
   use 'matze/vim-move'
   use 'ntpeters/vim-better-whitespace'
   use {
@@ -74,7 +76,6 @@ return require('packer').startup({function()
 
   -- Unused
   -- use 'sindrets/diffview.nvim'
-  -- use 'lukas-reineke/indent-blankline.nvim'
   -- use 'tpope/vim-obsession'
 end, config = {
     compile_path = vim.fn.stdpath('config')..'/lua/packer_compiled.lua'
