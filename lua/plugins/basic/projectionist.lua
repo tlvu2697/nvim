@@ -107,3 +107,4 @@ g.projectionist_heuristics = {
 vim.api.nvim_set_keymap('', '<leader>aa', ':w <bar> :e <bar> :A<CR>', {})
 vim.api.nvim_set_keymap('', '<leader>as', ':w <bar> :e <bar> :AS<CR>', {})
 vim.api.nvim_set_keymap('', '<leader>av', ':w <bar> :e <bar> :AV<CR>', {})
+vim.api.nvim_set_keymap('', '<leader>at', ':w <bar> :e <bar> :AT<CR>', {})
