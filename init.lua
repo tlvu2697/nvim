@@ -1,5 +1,7 @@
 local start_time = vim.fn.reltime()
 
+pcall(require, 'impatient')
+
 require('plugins')
 
 require('helper')
@@ -8,6 +10,7 @@ require('theme')
 require('mappings')
 
 for _, path in ipairs({
+  'language_support',
   'basic',
   'development',
   'git',

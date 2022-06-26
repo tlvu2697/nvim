@@ -1,19 +1,31 @@
 return require('packer').startup({function()
   use 'lewis6991/impatient.nvim'
-  require('impatient')
 
-  -- Self
+  -- GROUP: Self
   use 'wbthomason/packer.nvim'
 
-  -- Theme
+  -- GROUP: Theme
   use 'joshdick/onedark.vim'
   use 'nvim-lualine/lualine.nvim'
 
-  -- Dependencies
+  -- GROUP: Dependencies
   use 'nvim-lua/plenary.nvim'
   use 'mrjones2014/load-all.nvim'
 
-  -- Basic
+  -- GROUP: Language Support
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    requires = {
+      'andymass/vim-matchup',
+      'nvim-treesitter/nvim-treesitter-textobjects',
+      'nvim-treesitter/playground',
+      'windwp/nvim-autopairs',
+      'windwp/nvim-ts-autotag',
+    }
+  }
+
+  -- GROUP: Basic
   use 'akinsho/nvim-toggleterm.lua'
   use 'benmills/vimux'
   use 'famiu/nvim-reload'
@@ -27,16 +39,6 @@ return require('packer').startup({function()
   use 'lukas-reineke/indent-blankline.nvim'
   use 'matze/vim-move'
   use 'ntpeters/vim-better-whitespace'
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    requires = {
-      'andymass/vim-matchup',
-      'windwp/nvim-autopairs',
-      'windwp/nvim-ts-autotag',
-      'nvim-treesitter/playground'
-    }
-  }
   use 'preservim/nerdcommenter'
   use {
     'preservim/nerdtree',
@@ -50,10 +52,9 @@ return require('packer').startup({function()
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use 'phaazon/hop.nvim'
-  use 'tanvirtin/vgit.nvim'
 
 
-  -- Development
+  -- GROUP: Development
   use 'AndrewRadev/splitjoin.vim'
   use 'honza/vim-snippets'
   use 'ludovicchabant/vim-gutentags'
@@ -61,7 +62,7 @@ return require('packer').startup({function()
   use 'vim-test/vim-test'
 
 
-  -- GIT
+  -- GROUP: GIT
   use 'junegunn/gv.vim'
   use 'kdheepak/lazygit.nvim'
   use 'lewis6991/gitsigns.nvim'
@@ -69,12 +70,12 @@ return require('packer').startup({function()
   use 'tpope/vim-rhubarb'
 
 
-  -- Languages
+  -- GROUP: Languages
   use 'galooshi/vim-import-js'
   use 'pangloss/vim-javascript'
 
 
-  -- Unused
+  -- GROUP: Deprecated
   -- use 'sindrets/diffview.nvim'
   -- use 'tpope/vim-obsession'
 end, config = {

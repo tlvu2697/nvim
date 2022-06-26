@@ -83,6 +83,10 @@ map('n', '<space>bd', ':bdelete<CR>', { silent = true })   --> Delete Buffer
 map('n', '<space>bn', ':bnext<CR>', { silent = true })     --> Next Buffer
 map('n', '<space>bp', ':bprevious<CR>', { silent = true }) --> Previous Buffer
 ----------------------------------------------------
+-- SECTION: Macro
+----------------------------------------------------
+map('x', '@', ':<C-u><cmd>lua visualMacroExecute()<CR>')
+----------------------------------------------------
 -- SECTION: Git
 ----------------------------------------------------
 -- Buffer

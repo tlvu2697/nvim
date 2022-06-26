@@ -26,6 +26,12 @@ function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+function bufMap(mode, lhs, rhs, opts)
+  local options = { noremap = true }
+  if opts then options = vim.tbl_extend('force', options, opts) end
+  vim.api.nvim_buf_set_keymap(0, mode, lhs, rhs, options)
+end
+
 function tableMerge(t1, t2)
   for k, v in pairs(t2) do
     if type(v) == 'table' then
@@ -63,4 +69,10 @@ function requireAllAt(path)
   for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath('config')..'/lua/plugins/'..path, [[v:val =~ '\.lua$']])) do
     require('plugins.'..path..'.'..file:gsub('%.lua$', ''))
   end
+end
+
+-- Does: Execute macro over selection
+function visualMacroExecute()
+  vim.cmd('echo "@".getcmdline()')
+  vim.cmd([[execute ":'<,'>normal @".nr2char(getchar())]])
 end
