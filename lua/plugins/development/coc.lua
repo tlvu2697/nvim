@@ -74,7 +74,7 @@ cmd([[
 -- SECTION: Misc
 ----------------------------------------------------
 cmd([[
-  command! -nargs=0 Format :call CocAction('format')
+  command! -nargs=0 Format :call CocActionAsync('format')
 
   nnoremap <silent><nowait> <space>ca :<C-u>CocList diagnostics<cr>
   nnoremap <silent><nowait> <space>ce :<C-u>CocList extensions<cr>

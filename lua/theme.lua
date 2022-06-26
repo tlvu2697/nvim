@@ -21,7 +21,22 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {},
     lualine_c = {'filename'},
-    lualine_x = {},
+    lualine_x = {
+      {
+        'diagnostics',
+        sources = { 'coc' },
+        sections = { 'error', 'warn', 'info', 'hint' },
+        diagnostics_color = {
+          error = { bg = '#2C323C' },
+          warn  = { bg = '#2C323C' },
+          info  = { bg = '#2C323C' },
+          hint  = { bg = '#2C323C' },
+        },
+        colored = true,
+        update_in_insert = true,
+        always_visible = false,
+      }
+    },
     lualine_y = {'filetype'},
     lualine_z = {'location'}
   },
@@ -36,6 +51,7 @@ require('lualine').setup {
   tabline = {},
   extensions = {
     'fzf',
-    'nerdtree'
+    'nerdtree',
+    'quickfix'
   }
 }
