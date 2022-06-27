@@ -2,16 +2,19 @@
 -- https://github.com/neoclide/coc.nvim
 ----------------------------------------------------
 g.coc_global_extensions = {
+  'coc-snippets',
+  -- https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
   'coc-eslint',
   'coc-json',
   'coc-markdownlint',
   'coc-prettier',
   'coc-solargraph',
-  'coc-snippets',
   'coc-sql',
   'coc-tsserver',
   'coc-xml',
   'coc-yaml',
+  -- https://github.com/neoclide/coc-sources
+  'coc-tag',
 }
 
 ----------------------------------------------------
@@ -59,15 +62,21 @@ cmd([[
 ]])
 
 ----------------------------------------------------
--- SECTION: Code Formatting & Fixing
+-- SECTION: Linting -> Fixing
 ----------------------------------------------------
 cmd([[
-  vmap <leader>f <Plug>(coc-format-selected)
   nmap <leader>f <Plug>(coc-format-selected)
-  nmap <silent> <leader>ff :call CocAction('format')<CR>
+  vmap <leader>f <Plug>(coc-format-selected)
+  nmap <silent> <leader>ff :call CocActionAsync('format')<CR>
+]])
 
+----------------------------------------------------
+-- SECTION: Diagnostics -> Taking Action
+----------------------------------------------------
+cmd([[
+  nmap <silent> [d <Plug>(coc-diagnostic-prev)
+  nmap <silent> ]d <Plug>(coc-diagnostic-next)
   nmap <silent> <leader>ac <Plug>(coc-codeaction)
-  nmap <silent> <leader>ef :CocFix<CR>
 ]])
 
 ----------------------------------------------------
