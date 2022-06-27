@@ -29,10 +29,10 @@ map('v', '<space>wm', '<ESC>:NERDTreeClose<CR>:MaximizerToggle<CR>gv', { silent 
 ----------------------------------------------------
 -- SECTION: Tabs
 ----------------------------------------------------
-map('n', '<C-t>', ':tabnew<CR>', { silent = true })   --> New tab
--- map('n', '<C-w>', ':tabclose<CR>', { silent = true }) --> Close tab
-map('n', '<space><Tab>', 'gt', { silent = true })     --> Next tab
-map('n', '<space><S-Tab>', 'gT', { silent = true })   --> Previous tab
+map('n', '<C-t>', ':tabnew<CR>', { silent = true })   --> Tab > New
+map('n', '<C-w>', ':tabclose<CR>', { silent = true }) --> Tab > Close
+map('n', '<space><Tab>', 'gt', { silent = true })     --> Tab > Next
+map('n', '<space><S-Tab>', 'gT', { silent = true })   --> Tab > Previous
 ----------------------------------------------------
 -- SECTION: Files
 ----------------------------------------------------
@@ -85,7 +85,7 @@ map('n', '<space>bp', ':bprevious<CR>', { silent = true }) --> Previous Buffer
 ----------------------------------------------------
 -- SECTION: Macro
 ----------------------------------------------------
-map('x', '@', ':<C-u><cmd>lua visualMacroExecute()<CR>')
+map('x', '@', ':<C-u><cmd>lua require("utils").visualMacroExecute()<CR>')
 ----------------------------------------------------
 -- SECTION: Git
 ----------------------------------------------------
@@ -119,6 +119,7 @@ cmd([[
 ----------------------------------------------------
 -- SECTION: Register
 ----------------------------------------------------
+map('v', 'p', '"_dP')                                      --> Don't copy the replaced text after pasting in visual mode
 map('n', '<space>re', ':registers<CR>', { silent = true }) --> Registers
 map('', '<space>p', '"0p', { silent = true })              --> Paste from register #0
 map('', '<space>P', '"0P', { silent = true })              --> Paste from register #0

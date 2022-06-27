@@ -17,7 +17,7 @@
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,
   "solargraph.promptDownload": false,
-  "solargraph.checkGemVersion": false,
+  "solargraph.checkGemVersion": true,
   "solargraph.symbols": false,
 
   "eslint.autoFixOnSave": false,

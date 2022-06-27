@@ -70,9 +70,3 @@ function requireAllAt(path)
     require('plugins.'..path..'.'..file:gsub('%.lua$', ''))
   end
 end
-
--- Does: Execute macro over selection
-function visualMacroExecute()
-  vim.cmd('echo "@".getcmdline()')
-  vim.cmd([[execute ":'<,'>normal @".nr2char(getchar())]])
-end
