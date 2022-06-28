@@ -1,8 +1,16 @@
 {
   "languageserver": {},
 
-  "coc.source.file.enable": false,
   "coc.preferences.extensionUpdateCheck": "daily",
+
+  "coc.source.file.enable": false,
+  "coc.source.around.enable": true,
+  "coc.source.buffer.enable": true,
+  "coc.source.tag.enable": true,
+
+  "coc.source.around.priority": 30,
+  "coc.source.buffer.priority": 20,
+  "coc.source.tag.priority": 10,
 
   "list.normalMappings": {
     "v": "action:vsplit",

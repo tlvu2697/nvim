@@ -56,7 +56,6 @@ return require('packer').startup({function()
 
   -- GROUP: Development
   use 'AndrewRadev/splitjoin.vim'
-  use 'honza/vim-snippets'
   use 'ludovicchabant/vim-gutentags'
   use { 'neoclide/coc.nvim', branch = 'release' }
   use 'vim-test/vim-test'
