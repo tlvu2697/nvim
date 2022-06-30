@@ -119,7 +119,7 @@ cmd([[
 ----------------------------------------------------
 -- SECTION: Register
 ----------------------------------------------------
-map('v', 'p', '"_dP')                                      --> Don't copy the replaced text after pasting in visual mode
+-- map('v', 'p', '"_dP')                                      --> Don't copy the replaced text after pasting in visual mode
 map('n', '<space>re', ':registers<CR>', { silent = true }) --> Registers
 map('', '<space>p', '"0p', { silent = true })              --> Paste from register #0
 map('', '<space>P', '"0P', { silent = true })              --> Paste from register #0

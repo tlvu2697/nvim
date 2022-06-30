@@ -25,7 +25,7 @@ require('lualine').setup {
       {
         'diagnostics',
         sources = { 'coc' },
-        sections = { 'error', 'warn', 'info', 'hint' },
+        sections = { 'error', 'warn', 'info' },
         diagnostics_color = {
           error = { bg = '#2C323C' },
           warn  = { bg = '#2C323C' },
@@ -44,7 +44,20 @@ require('lualine').setup {
     lualine_a = {},
     lualine_b = {},
     lualine_c = {'filename'},
-    lualine_x = {'location'},
+    lualine_x = {
+      {
+        'diagnostics',
+        sources = { 'coc' },
+        sections = { 'error', 'warn' },
+        diagnostics_color = {
+          error = { bg = '#2C323C' },
+          warn  = { bg = '#2C323C' },
+        },
+        colored = false,
+        update_in_insert = true,
+        always_visible = false,
+      },
+    },
     lualine_y = {},
     lualine_z = {}
   },

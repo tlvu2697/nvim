@@ -20,7 +20,7 @@
   "diagnostic.messageTarget": "echo",
   "diagnostic.checkCurrentLine": false,
   "suggest.maxCompleteItemCount": 25,
-  "suggest.minTriggerInputLength": 3,
+  "suggest.minTriggerInputLength": 2,
 
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,
