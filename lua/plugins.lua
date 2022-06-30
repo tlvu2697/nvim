@@ -72,6 +72,7 @@ return require('packer').startup({function()
   -- GROUP: Languages
   use 'galooshi/vim-import-js'
   use 'pangloss/vim-javascript'
+  use 'davidgranstrom/nvim-markdown-preview'
 
 
   -- GROUP: Deprecated

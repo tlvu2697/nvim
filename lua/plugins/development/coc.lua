@@ -10,6 +10,7 @@ g.coc_global_extensions = {
   'coc-prettier',
   'coc-solargraph',
   'coc-sql',
+  'coc-stylua',
   'coc-tsserver',
   'coc-xml',
   'coc-yaml',
