@@ -8,17 +8,17 @@
 ----------------------------------------------------
 -- SECTION: nvim-treesitter
 ----------------------------------------------------
-require'nvim-treesitter.configs'.setup {
+require("nvim-treesitter.configs").setup({
   ensure_installed = {
-    'bash',
-    'dockerfile',
-    'html',
-    'javascript',
-    'json',
-    'lua',
-    'ruby',
-    'typescript',
-    'yaml',
+    "bash",
+    "dockerfile",
+    "html",
+    "javascript",
+    "json",
+    "lua",
+    "ruby",
+    "typescript",
+    "yaml",
   },
   highlight = {
     enable = true,
@@ -26,7 +26,7 @@ require'nvim-treesitter.configs'.setup {
   },
   indent = {
     enable = true,
-    disable = { 'ruby' },
+    disable = { "ruby" },
   },
   autotag = { enable = true },
   autopairs = { enable = true },
@@ -55,8 +55,8 @@ require'nvim-treesitter.configs'.setup {
       },
     },
   },
-}
+})
 ----------------------------------------------------
 -- SECTION: vim-matchup
 ----------------------------------------------------
-g.matchup_matchparen_offscreen = { method = 'none' }
+g.matchup_matchparen_offscreen = { method = "none" }

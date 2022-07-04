@@ -2,20 +2,20 @@
 -- https://github.com/neoclide/coc.nvim
 ----------------------------------------------------
 g.coc_global_extensions = {
-  'coc-snippets',
+  "coc-snippets",
   -- https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
-  'coc-eslint',
-  'coc-json',
-  'coc-markdownlint',
-  'coc-prettier',
-  'coc-solargraph',
-  'coc-sql',
-  'coc-stylua',
-  'coc-tsserver',
-  'coc-xml',
-  'coc-yaml',
+  "coc-eslint",
+  "coc-json",
+  "coc-markdownlint",
+  "coc-prettier",
+  "coc-solargraph",
+  "coc-sql",
+  "coc-stylua",
+  "coc-tsserver",
+  "coc-xml",
+  "coc-yaml",
   -- https://github.com/neoclide/coc-sources
-  'coc-tag',
+  "coc-tag",
 }
 
 ----------------------------------------------------
