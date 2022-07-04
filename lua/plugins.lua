@@ -52,6 +52,7 @@ return require('packer').startup({function()
   use 'tpope/vim-surround'
   use 'tpope/vim-unimpaired'
   use 'phaazon/hop.nvim'
+  use 'chentoast/marks.nvim'
 
 
   -- GROUP: Development

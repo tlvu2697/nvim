@@ -6,3 +6,4 @@
     -- autocmd FileType markdown MarkdownPreview
   -- augroup END
 -- ]])
+map('n', '<space>fp', ':MarkdownPreview<CR>/')
