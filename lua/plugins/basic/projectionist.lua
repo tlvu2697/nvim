@@ -64,40 +64,53 @@ local typescript = {
   ["*.ts"] = {
     alternate = {
       "{dirname}/__tests__/{basename}.spec.ts",
-      "{dirname}/__tests__/integration.spec.ts",
-    },
-    type = "source",
-  },
-  ["*/integration.spec.ts"] = {
-    alternate = "{dirname}/index.ts",
-    type = "test",
-  },
-  ["*.spec.ts"] = {
-    alternate = "{dirname}/../{basename}.ts",
-    type = "test",
-  },
-}
-
-local typescriptreact = {
-  ["*.tsx"] = {
-    alternate = {
       "{dirname}/__tests__/{basename}.spec.tsx",
+      "{dirname}/__tests__/integration.spec.ts",
       "{dirname}/__tests__/integration.spec.tsx",
     },
     type = "source",
   },
+  ["*.tsx"] = {
+    alternate = {
+      "{dirname}/__tests__/{basename}.spec.ts",
+      "{dirname}/__tests__/{basename}.spec.tsx",
+      "{dirname}/__tests__/integration.spec.ts",
+      "{dirname}/__tests__/integration.spec.tsx",
+    },
+    type = "source",
+  },
+  ["*/integration.spec.ts"] = {
+    alternate = {
+      "{dirname}/index.tsx",
+      "{dirname}/index.ts",
+    },
+    type = "test",
+  },
   ["*/integration.spec.tsx"] = {
-    alternate = "{dirname}/index.tsx",
+    alternate = {
+      "{dirname}/index.tsx",
+      "{dirname}/index.ts",
+    },
+    type = "test",
+  },
+  ["*.spec.ts"] = {
+    alternate = {
+      "{dirname}/../{basename}.tsx",
+      "{dirname}/../{basename}.ts",
+    },
     type = "test",
   },
   ["*.spec.tsx"] = {
-    alternate = "{dirname}/../{basename}.tsx",
+    alternate = {
+      "{dirname}/../{basename}.tsx",
+      "{dirname}/../{basename}.ts",
+    },
     type = "test",
   },
 }
 
 g.projectionist_heuristics = {
-  ["*"] = tablesMerge(rake, rails, javascript, typescript, typescriptreact),
+  ["*"] = tablesMerge(rake, rails, javascript, typescript),
 }
 
 vim.api.nvim_set_keymap("", "<leader>aa", ":w <bar> :e <bar> :A<CR>", {})

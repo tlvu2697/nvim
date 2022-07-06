@@ -114,6 +114,9 @@ cmd([[
     autocmd!
     autocmd FileType javascript nnoremap <leader>tb :call VimuxRunCommand('yarn test' . ' ' . expand("%"))<CR>|
     autocmd FileType javascript nnoremap <leader>tl :VimuxRunLastCommand<CR>|
+
+    autocmd FileType typescriptreact nnoremap <leader>tb :call VimuxRunCommand('yarn test' . ' ' . expand("%"))<CR>|
+    autocmd FileType typescriptreact nnoremap <leader>tl :VimuxRunLastCommand<CR>|
   augroup END
 ]])
 ----------------------------------------------------
