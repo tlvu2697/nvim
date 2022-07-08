@@ -6,7 +6,7 @@ return require("packer").startup({
     use("wbthomason/packer.nvim")
 
     -- GROUP: Theme
-    use("joshdick/onedark.vim")
+    use("EdenEast/nightfox.nvim")
     use("nvim-lualine/lualine.nvim")
 
     -- GROUP: Dependencies
@@ -29,7 +29,6 @@ return require("packer").startup({
     -- GROUP: Basic
     use("akinsho/nvim-toggleterm.lua")
     use("benmills/vimux")
-    use("famiu/nvim-reload")
     use("gcmt/taboo.vim")
     use({
       "junegunn/fzf",

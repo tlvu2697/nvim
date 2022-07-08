@@ -1,9 +1,18 @@
 ----------------------------------------------------
 -- SECTION: Theme
 ----------------------------------------------------
-cmd("colorscheme onedark")
+local nightfox = require("nightfox");
+nightfox.setup({
+  options = {
+    modules = {
+      hop = false,
+    },
+  },
+})
+nightfox.compile();
 
-opt.background = "dark"
+require("colorscheme")
+
 opt.encoding = "UTF-8"
 opt.laststatus = 2
 opt.termguicolors = true
@@ -12,7 +21,6 @@ opt.showmode = false
 require("lualine").setup({
   options = {
     icons_enabled = false,
-    theme = "onedark",
     component_separators = { "", "" },
     section_separators = { "", "" },
     disabled_filetypes = {},

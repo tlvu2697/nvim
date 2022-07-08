@@ -45,7 +45,7 @@ map("n", "<space>fec", ":vsplit config/application.yml<CR>", { silent = true }) 
 map("n", "<space>fed", ":vsplit ~/.config/nvim/init.lua<CR>", { silent = true })             --> File > Editor > Definition
 map("n", "<space>fez", ":vsplit ~/.zshrc<CR>", { silent = true })                            --> File > Editor > ZSH
 map("n", "<space>fet", ":vsplit ~/.tmux.conf<CR>", { silent = true })                        --> File > Editor > Tmux
-map("n", "<space>fer", ":Restart<CR>")                                                       --> File > Editor > Restart
+map("n", "<space>fer", '<cmd>lua require("utils").reloadConfig()<CR>')                           --> File > Editor > Restart
 map("n", "<space>ff", ":Files %:p:h<CR>", { silent = true })                                 --> File > Find > File in Current Directory
 map("n", "<space>fh", ":History<CR>", { silent = true })                                     --> File > Find > File in History
 map("n", "<space>fc", ':saveas <C-R>=expand("%:p:h")<CR>/')                                  --> File > Copy
