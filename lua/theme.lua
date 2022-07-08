@@ -1,15 +1,16 @@
 ----------------------------------------------------
 -- SECTION: Theme
 ----------------------------------------------------
-local nightfox = require("nightfox");
+local nightfox = require("nightfox")
 nightfox.setup({
   options = {
     modules = {
       hop = false,
+      gitsigns = false,
     },
   },
 })
-nightfox.compile();
+nightfox.compile()
 
 require("colorscheme")
 

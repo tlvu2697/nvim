@@ -1,4 +1,5 @@
 plugged/
 plugin/
 
+lua/colorscheme.lua
 lua/packer_compiled.lua
