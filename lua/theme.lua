@@ -34,7 +34,7 @@ require("lualine").setup({
       {
         "diagnostics",
         sources = { "coc" },
-        sections = { "error", "warn", "info" },
+        sections = { "error", "warn", "info", "hint" },
         diagnostics_color = {
           error = { bg = "#2C323C" },
           warn = { bg = "#2C323C" },
