@@ -5,14 +5,14 @@ local nightfox = require("nightfox")
 nightfox.setup({
   options = {
     modules = {
-      hop = false,
-      gitsigns = false,
+      hop = true,
+      gitsigns = true,
     },
   },
 })
 nightfox.compile()
 
-require("colorscheme")
+cmd("colorscheme "..(os.getenv("THEME") or 'nightfox'))
 
 opt.encoding = "UTF-8"
 opt.laststatus = 2
