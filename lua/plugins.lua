@@ -72,7 +72,12 @@ return require("packer").startup({
     -- GROUP: Languages
     use("galooshi/vim-import-js")
     use("pangloss/vim-javascript")
-    use("davidgranstrom/nvim-markdown-preview")
+    use({
+      "iamcco/markdown-preview.nvim",
+      run = function()
+        vim.fn["mkdp#util#install"]()
+      end,
+    })
 
     -- GROUP: Deprecated
     -- use 'sindrets/diffview.nvim'

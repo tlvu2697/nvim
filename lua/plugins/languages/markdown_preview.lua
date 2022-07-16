@@ -1,9 +1,7 @@
 ----------------------------------------------------
--- https://github.com/davidgranstrom/nvim-markdown-preview
+-- https://github.com/iamcco/markdown-preview.nvim
 ----------------------------------------------------
--- vim.cmd([[
--- augroup MarkdownPreview
--- autocmd FileType markdown MarkdownPreview
--- augroup END
--- ]])
-map("n", "<space>fp", ":MarkdownPreview<CR>/")
+g.mkdp_auto_start = 0
+g.mkdp_auto_close = 0
+g.mkdp_refresh_slow = 1
+map("n", "<space>fp", ":MarkdownPreview<CR>")
