@@ -17,6 +17,7 @@ g.coc_global_extensions = {
   "coc-yaml",
   -- https://github.com/neoclide/coc-sources
   "coc-tag",
+  "coc-word",
 }
 
 ----------------------------------------------------
