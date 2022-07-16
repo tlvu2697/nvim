@@ -9,6 +9,7 @@ g.coc_global_extensions = {
   "coc-markdownlint",
   "coc-prettier",
   "coc-solargraph",
+  "coc-spell-checker",
   "coc-sql",
   "coc-stylua",
   "coc-tsserver",
@@ -66,8 +67,7 @@ cmd([[
 -- SECTION: Linting -> Fixing
 ----------------------------------------------------
 cmd([[
-  nmap <leader>f <Plug>(coc-format-selected)
-  vmap <leader>f <Plug>(coc-format-selected)
+  vmap <leader>ff <Plug>(coc-format-selected)
   nmap <silent> <leader>ff :call CocActionAsync('format')<CR>
 ]])
 
@@ -77,6 +77,7 @@ cmd([[
 cmd([[
   nmap <silent> [d <Plug>(coc-diagnostic-prev)
   nmap <silent> ]d <Plug>(coc-diagnostic-next)
+  vmap <leader>ac <Plug>(coc-codeaction-selected)
   nmap <silent> <leader>ac <Plug>(coc-codeaction)
 ]])
 

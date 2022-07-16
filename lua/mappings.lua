@@ -85,7 +85,7 @@ map("n", "<space>bp", ":bprevious<CR>", { silent = true }) --> Previous Buffer
 ----------------------------------------------------
 -- SECTION: Macro
 ----------------------------------------------------
-map("x", "@", ':<C-u><cmd>lua require("utils").visualMacroExecute()<CR>')
+map("x", "@", ':<C-u><cmd>lua require("utils").visualMacroExecute()<CR>') --> Apply macro on visual selection
 ----------------------------------------------------
 -- SECTION: Git
 ----------------------------------------------------
@@ -130,5 +130,5 @@ map("", "<space>P", '"0P', { silent = true })              --> Paste from regist
 -- SECTION: Misc
 ----------------------------------------------------
 map("n", "K", "i<CR><ESC>", { silent = true }) --> Break line at cursor
-map("", "$", "g_", { silent = true })          --> Skip linebreak
+map("", "$", "g_", { silent = true })          --> To endline but skip linebreak
 map("", "Q", "<Nop>", { silent = true })       --> Disable Ex mode
