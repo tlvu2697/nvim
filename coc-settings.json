@@ -34,5 +34,10 @@
   "yaml.format.enable": true,
 
   "javascript.suggestionActions.enabled": false,
-  "typescript.suggestionActions.enabled": false
+  "typescript.suggestionActions.enabled": false,
+
+  "markdownlint.config": {
+    "line-length": false,
+    "indentation": 2
+  }
 }
