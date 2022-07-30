@@ -43,7 +43,8 @@
   /* coc-markdownlint */
   "markdownlint.config": {
     "line-length": false,
-    "indentation": 2
+    "indentation": 2,
+    "no-inline-html": false
   },
 
   /* coc-spell-check */
