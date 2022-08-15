@@ -49,5 +49,11 @@
 
   /* coc-spell-check */
   "cSpell.language": "en",
-  "cSpell.enabledLanguageIds": ["markdown"]
+  "cSpell.enabledLanguageIds": ["markdown"],
+
+  /* coc-sql */
+  "sql.database": "postgresql",
+  "sql.formatOptions": {
+    "language": "postgresql"
+  }
 }
