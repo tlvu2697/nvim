@@ -7,6 +7,7 @@
   },
 
   /* completion settings */
+  "suggest.noselect": true,
   "coc.source.file.enable": false,
   "coc.source.around.enable": true,
   "coc.source.buffer.enable": true,
