@@ -60,6 +60,7 @@ return require("packer").startup({
     use("AndrewRadev/splitjoin.vim")
     use("ludovicchabant/vim-gutentags")
     use({ "neoclide/coc.nvim", branch = "release" })
+    use("wakatime/vim-wakatime")
     use("vim-test/vim-test")
 
     -- GROUP: GIT
