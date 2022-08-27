@@ -10,10 +10,10 @@ require("theme")
 require("mappings")
 
 for _, path in ipairs({
-  "language_support",
   "basic",
   "development",
   "git",
+  "language_support",
   "languages",
 }) do
   -- requireAllAt(path)
