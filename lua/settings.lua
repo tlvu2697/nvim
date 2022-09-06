@@ -38,6 +38,7 @@ opt.autoread = true
 opt.clipboard = { "unnamed", "unnamedplus" }
 opt.cursorline = false
 opt.expandtab = true
+opt.modeline = false
 opt.number = true
 opt.relativenumber = true
 opt.tabstop = 8
