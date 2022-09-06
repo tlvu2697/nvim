@@ -29,6 +29,7 @@ return require("packer").startup({
     -- GROUP: Basic
     use("akinsho/nvim-toggleterm.lua")
     use("benmills/vimux")
+    use("chentoast/marks.nvim")
     use("gcmt/taboo.vim")
     use({
       "junegunn/fzf",
@@ -48,13 +49,13 @@ return require("packer").startup({
         "Xuyuanp/nerdtree-git-plugin",
       },
     })
+    use("RRethy/vim-illuminate")
     use("szw/vim-maximizer")
     use("tpope/vim-projectionist")
     use("tpope/vim-repeat")
     use("tpope/vim-surround")
     use("tpope/vim-unimpaired")
     use("phaazon/hop.nvim")
-    use("chentoast/marks.nvim")
 
     -- GROUP: Development
     use("AndrewRadev/splitjoin.vim")

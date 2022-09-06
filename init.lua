@@ -6,7 +6,6 @@ require("plugins")
 
 require("helper")
 require("settings")
-require("theme")
 require("mappings")
 
 for _, path in ipairs({
@@ -20,4 +19,10 @@ for _, path in ipairs({
   require("load-all")(vim.fn.stdpath("config") .. "/lua/plugins/" .. path)
 end
 
-print(vim.fn.printf("Loaded [%.0fms]", vim.fn.reltimefloat(vim.fn.reltime(start_time)) * 1000))
+vim.api.nvim_echo(
+  { { vim.fn.printf("Loaded [%.0fms]", vim.fn.reltimefloat(vim.fn.reltime(start_time)) * 1000), "None" } },
+  false,
+  {}
+)
+
+require("theme")
