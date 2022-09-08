@@ -8,6 +8,7 @@ g.coc_global_extensions = {
   "coc-json",
   "coc-markdownlint",
   "coc-prettier",
+  "coc-protobuf",
   "coc-solargraph",
   "coc-spell-checker",
   "coc-sql",
