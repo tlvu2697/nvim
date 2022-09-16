@@ -53,9 +53,19 @@ local javascript = {
   ["*/integration.spec.js"] = {
     alternate = "{dirname}/index.js",
     type = "test",
+    alternate = {
+      "{dirname}/index.js",
+      "{dirname}/index.ts",
+      "{dirname}/index.tsx",
+    },
   },
   ["*.spec.js"] = {
     alternate = "{dirname}/../{basename}.js",
+    alternate = {
+      "{dirname}/../{basename}.js",
+      "{dirname}/../{basename}.ts",
+      "{dirname}/../{basename}.tsx",
+    },
     type = "test",
   },
 }
@@ -63,49 +73,21 @@ local javascript = {
 local typescript = {
   ["*.ts"] = {
     alternate = {
-      "{dirname}/__tests__/{basename}.spec.ts",
-      "{dirname}/__tests__/{basename}.spec.tsx",
-      "{dirname}/__tests__/integration.spec.ts",
-      "{dirname}/__tests__/integration.spec.tsx",
+      "{dirname}/__tests__/{basename}.spec.js",
+      "{dirname}/__tests__/integration.spec.js",
+      "{dirname}/__test__/{basename}.spec.js",
+      "{dirname}/__test__/integration.spec.js",
     },
     type = "source",
   },
   ["*.tsx"] = {
     alternate = {
-      "{dirname}/__tests__/{basename}.spec.ts",
-      "{dirname}/__tests__/{basename}.spec.tsx",
-      "{dirname}/__tests__/integration.spec.ts",
-      "{dirname}/__tests__/integration.spec.tsx",
+      "{dirname}/__tests__/{basename}.spec.js",
+      "{dirname}/__tests__/integration.spec.js",
+      "{dirname}/__test__/{basename}.spec.js",
+      "{dirname}/__test__/integration.spec.js",
     },
     type = "source",
-  },
-  ["*/integration.spec.ts"] = {
-    alternate = {
-      "{dirname}/index.tsx",
-      "{dirname}/index.ts",
-    },
-    type = "test",
-  },
-  ["*/integration.spec.tsx"] = {
-    alternate = {
-      "{dirname}/index.tsx",
-      "{dirname}/index.ts",
-    },
-    type = "test",
-  },
-  ["*.spec.ts"] = {
-    alternate = {
-      "{dirname}/../{basename}.tsx",
-      "{dirname}/../{basename}.ts",
-    },
-    type = "test",
-  },
-  ["*.spec.tsx"] = {
-    alternate = {
-      "{dirname}/../{basename}.tsx",
-      "{dirname}/../{basename}.ts",
-    },
-    type = "test",
   },
 }
 

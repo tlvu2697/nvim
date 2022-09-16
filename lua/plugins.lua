@@ -49,7 +49,6 @@ return require("packer").startup({
         "Xuyuanp/nerdtree-git-plugin",
       },
     })
-    use("RRethy/vim-illuminate")
     use("szw/vim-maximizer")
     use("tpope/vim-projectionist")
     use("tpope/vim-repeat")
@@ -61,7 +60,6 @@ return require("packer").startup({
     use("AndrewRadev/splitjoin.vim")
     use("ludovicchabant/vim-gutentags")
     use({ "neoclide/coc.nvim", branch = "release" })
-    use("wakatime/vim-wakatime")
     use("vim-test/vim-test")
 
     -- GROUP: GIT
