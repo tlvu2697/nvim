@@ -47,11 +47,12 @@ local javascript = {
     alternate = {
       "{dirname}/__tests__/{basename}.spec.js",
       "{dirname}/__tests__/integration.spec.js",
+      "{dirname}/__test__/{basename}.spec.js",
+      "{dirname}/__test__/integration.spec.js",
     },
     type = "source",
   },
   ["*/integration.spec.js"] = {
-    alternate = "{dirname}/index.js",
     type = "test",
     alternate = {
       "{dirname}/index.js",
@@ -60,7 +61,6 @@ local javascript = {
     },
   },
   ["*.spec.js"] = {
-    alternate = "{dirname}/../{basename}.js",
     alternate = {
       "{dirname}/../{basename}.js",
       "{dirname}/../{basename}.ts",
