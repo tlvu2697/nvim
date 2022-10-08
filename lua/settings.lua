@@ -56,6 +56,7 @@ opt.updatetime = 100
 opt.signcolumn = "yes"
 opt.shortmess:append({ c = true })
 opt.switchbuf:append({ "useopen" })
+opt.mouse = nil
 ----------------------------------------------------
 -- SECTION: Search
 ----------------------------------------------------
