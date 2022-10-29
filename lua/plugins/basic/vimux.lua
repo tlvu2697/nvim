@@ -4,4 +4,4 @@
 g.VimuxOrientation = "h"
 g.VimuxHeight = "30"
 g.VimuxOrientation = "v"
-g.VimuxHeight = "15"
+g.VimuxHeight = "30"

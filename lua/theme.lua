@@ -7,6 +7,8 @@ nightfox.setup({
     modules = {
       hop = true,
       gitsigns = true,
+      coc = true,
+      treesitter = true,
     },
   },
 })
