@@ -1,8 +1,7 @@
 ----------------------------------------------------
 -- SECTION: Theme
 ----------------------------------------------------
-local nightfox = require("nightfox")
-nightfox.setup({
+require("nightfox").setup({
   options = {
     modules = {
       hop = true,
@@ -12,10 +11,15 @@ nightfox.setup({
     },
   },
 })
-nightfox.compile()
 
-opt.background = (os.getenv("THEME_MODE") or 'light')
-cmd("colorscheme "..(os.getenv("THEME") or 'dayfox'))
+require("onedark").setup({
+  highlights = {
+    MatchParen = { fg = "$yellow", bg = "none", sp = "none", fmt = "bold" },
+  },
+})
+
+opt.background = (os.getenv("THEME_MODE") or "light")
+cmd("colorscheme " .. (os.getenv("THEME") or "dayfox"))
 
 opt.encoding = "UTF-8"
 opt.laststatus = 2
