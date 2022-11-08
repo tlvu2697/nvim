@@ -14,6 +14,7 @@ nightfox.setup({
 })
 nightfox.compile()
 
+opt.background = (os.getenv("THEME_MODE") or 'light')
 cmd("colorscheme "..(os.getenv("THEME") or 'dayfox'))
 
 opt.encoding = "UTF-8"

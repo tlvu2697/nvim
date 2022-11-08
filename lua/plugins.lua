@@ -8,6 +8,7 @@ return require("packer").startup({
     -- GROUP: Theme
     use("EdenEast/nightfox.nvim")
     use("nvim-lualine/lualine.nvim")
+    use("navarasu/onedark.nvim")
 
     -- GROUP: Dependencies
     use("nvim-lua/plenary.nvim")
