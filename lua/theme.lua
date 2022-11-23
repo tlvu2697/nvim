@@ -7,7 +7,7 @@ require("nightfox").setup({
       hop = true,
       gitsigns = true,
       coc = true,
-      treesitter = true,
+      treesitter = false,
     },
   },
 })
