@@ -31,7 +31,7 @@
   "solargraph.symbols": false,
 
   /* coc-eslint */
-  "eslint.autoFixOnSave": true,
+  "eslint.autoFixOnSave": false,
   "eslint.run": "onSave",
 
   /* coc-yaml */
