@@ -35,4 +35,4 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-map("n", "<space>gg", "<cmd>lua _lazygit_toggle()<CR>", { silent = true })
+-- map("n", "<space>gg", "<cmd>lua _lazygit_toggle()<CR>", { silent = true })

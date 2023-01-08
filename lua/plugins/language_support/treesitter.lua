@@ -18,6 +18,7 @@ require("nvim-treesitter.configs").setup({
     "lua",
     "markdown",
     "proto",
+    "query",
     "ruby",
     "typescript",
     "yaml",

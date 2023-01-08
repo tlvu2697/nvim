@@ -4,6 +4,9 @@
 require("nightfox").setup({
   options = {
     modules = {
+      native_lsp = {
+        enable = false,
+      },
       hop = true,
       gitsigns = true,
       coc = true,

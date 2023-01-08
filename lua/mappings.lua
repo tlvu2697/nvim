@@ -58,7 +58,7 @@ map("n", "<space>fyN", ':let @+=expand("%:t") | echo @+<CR>', { silent = true })
 ----------------------------------------------------
 -- SECTION: Session
 ----------------------------------------------------
-map("n", "<space>sq", ":NERDTreeClose<CR>:mksession! Session.vim<CR>:qa!<CR>") --> Session > Save & Quit
+map("n", "<space>sq", ":tabdo NERDTreeClose<CR>:mksession! Session.vim<CR>:qa!<CR>") --> Session > Save & Quit
 map("n", "<space>sl", ":source Session.vim<CR>", { silent = true })            --> Session > Load
 ----------------------------------------------------
 -- SECTION: Search
