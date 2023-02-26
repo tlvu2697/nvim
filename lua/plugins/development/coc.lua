@@ -93,4 +93,9 @@ cmd([[
   nnoremap <silent><nowait> <space>ca :<C-u>CocList diagnostics<cr>
   nnoremap <silent><nowait> <space>ce :<C-u>CocList extensions<cr>
   nnoremap <silent><nowait> <space>cc :<C-u>CocList commands<cr>
+
+  augroup BufferTest
+    autocmd!
+    autocmd FileType cs setlocal shiftwidth=4 tabstop=4
+  augroup END
 ]])

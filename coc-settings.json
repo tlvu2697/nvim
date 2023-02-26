@@ -1,5 +1,12 @@
 {
-  "languageserver": {},
+  "languageserver": {
+    /* dotnet tool install --global csharp-ls */
+    "csharp": {
+      "command": "csharp-ls",
+      "rootPatterns": ["*.sln", "git"],
+      "filetypes": ["cs", "csharp"]
+    }
+  },
   "coc.preferences.extensionUpdateCheck": "daily",
   "list.normalMappings": {
     "v": "action:vsplit",
@@ -18,7 +25,7 @@
   "coc.source.tag.priority": 10,
 
   /* diagnostic settings */
-  "diagnostic.messageTarget": "echo",
+  "diagnostic.messageTarget": "float",
   "diagnostic.checkCurrentLine": false,
   "suggest.maxCompleteItemCount": 25,
   "suggest.minTriggerInputLength": 2,
