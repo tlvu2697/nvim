@@ -33,7 +33,7 @@
   /* coc-solargraph */
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,
-  "solargraph.promptDownload": false,
+  "solargraph.promptDownload": true,
   "solargraph.checkGemVersion": true,
   "solargraph.symbols": false,
 
