@@ -6,7 +6,6 @@ g.coc_global_extensions = {
   -- https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
   "coc-eslint",
   "coc-json",
-  "coc-markdownlint",
   "coc-prettier",
   "coc-protobuf",
   "coc-pyright",
