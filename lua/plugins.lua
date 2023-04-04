@@ -28,7 +28,6 @@ return require("packer").startup({
     })
 
     -- GROUP: Basic
-    use("akinsho/nvim-toggleterm.lua")
     use("benmills/vimux")
     use("chentoast/marks.nvim")
     use("gcmt/taboo.vim")
@@ -59,6 +58,7 @@ return require("packer").startup({
 
     -- GROUP: Development
     use("AndrewRadev/splitjoin.vim")
+    use("github/copilot.vim")
     use("ludovicchabant/vim-gutentags")
     use({ "neoclide/coc.nvim", branch = "release" })
     use("vim-test/vim-test")
@@ -81,8 +81,9 @@ return require("packer").startup({
     })
 
     -- GROUP: Deprecated
-    -- use 'sindrets/diffview.nvim'
-    -- use 'tpope/vim-obsession'
+    -- use("sindrets/diffview.nvim")
+    -- use("tpope/vim-obsession")
+    -- use("akinsho/nvim-toggleterm.lua")
   end,
   config = {
     compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua",

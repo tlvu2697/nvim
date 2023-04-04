@@ -48,13 +48,6 @@
   "javascript.suggestionActions.enabled": false,
   "typescript.suggestionActions.enabled": false,
 
-  /* coc-markdownlint */
-  "markdownlint.config": {
-    "line-length": false,
-    "no-inline-html": false,
-    "code-block-style": false
-  },
-
   /* coc-spell-check */
   "cSpell.language": "en",
   "cSpell.enabledLanguageIds": ["markdown"],
