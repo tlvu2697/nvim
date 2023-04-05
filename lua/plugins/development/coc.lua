@@ -97,4 +97,6 @@ cmd([[
     autocmd!
     autocmd FileType cs setlocal shiftwidth=4 tabstop=4
   augroup END
+
+  autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
 ]])

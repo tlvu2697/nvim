@@ -56,5 +56,6 @@
   "sql.database": "postgresql",
   "sql.formatOptions": {
     "language": "postgresql"
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
