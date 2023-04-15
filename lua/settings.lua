@@ -24,7 +24,11 @@ end
 -- SECTION: Important
 ----------------------------------------------------
 g.mapleader = ","
-g.loaded_ruby_provider = 0
+
+-- disable some default providers
+for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
+  g["loaded_" .. provider .. "_provider"] = 0
+end
 ----------------------------------------------------
 -- SECTION: General
 ----------------------------------------------------
@@ -34,12 +38,12 @@ opt.autoindent = true
 opt.smartindent = true
 opt.autoread = true
 opt.clipboard = { "unnamed", "unnamedplus" }
-opt.cursorline = false
+opt.cursorline = true
 opt.expandtab = true
 opt.modeline = false
 opt.number = true
 opt.relativenumber = true
-opt.tabstop = 8
+opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.splitright = true
