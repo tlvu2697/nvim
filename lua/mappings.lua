@@ -1,7 +1,7 @@
 ----------------------------------------------------
 -- SECTION: Windows
 ----------------------------------------------------
-map("n", "<space>0", ":NERDTreeFind<CR>", { silent = true })                              --> Window > Find
+map("n", "<space>0", ":TreeFind<CR>", { silent = true })                              --> Window > Find
 map("n", "<space>1", ":exe 1 . 'wincmd w'<CR>", { silent = true })                        --> Window 1
 map("n", "<space>2", ":exe 2 . 'wincmd w'<CR>", { silent = true })                        --> Window 2
 map("n", "<space>3", ":exe 3 . 'wincmd w'<CR>", { silent = true })                        --> Window 3
@@ -24,8 +24,8 @@ map("n", "<space>w<S-k>", ":wincmd <S-k><CR>", { silent = true })               
 map("n", "<space>w<S-j>", ":wincmd <S-j><CR>", { silent = true })                         --> Move Window Very Bottom
 map("n", "<space>w<S-h>", ":wincmd <S-h><CR>", { silent = true })                         --> Move Window Far Right
 map("n", "<space>w<S-l>", ":wincmd <S-l><CR>", { silent = true })                         --> Move Window Far Left
-map("n", "<space>wm", ":NERDTreeClose<CR>:MaximizerToggle<CR>", { silent = true })        --> Window Maximize
-map("v", "<space>wm", "<ESC>:NERDTreeClose<CR>:MaximizerToggle<CR>gv", { silent = true }) --> Window Maximize
+map("n", "<space>wm", ":TreeClose<CR>:MaximizerToggle<CR>", { silent = true })        --> Window Maximize
+map("v", "<space>wm", "<ESC>:TreeClose<CR>:MaximizerToggle<CR>gv", { silent = true }) --> Window Maximize
 ----------------------------------------------------
 -- SECTION: Tabs
 ----------------------------------------------------
@@ -40,7 +40,7 @@ map("n", "<space><space>", "<ESC>:w<CR>", { silent = true })                    
 map("n", "<space>e", "<ESC>:e<CR>", { silent = true })                                       --> File > Refresh
 map("n", "<space>q", "<ESC>:q<CR>", { silent = true })                                       --> File > Close
 map("n", "<space>wq", "<ESC>:wq<CR>", { silent = true })                                     --> File > Save & Close
-map("n", "<space>ft", ":NERDTreeToggle<CR>", { silent = true })                              --> File > Tree
+map("n", "<space>ft", ":TreeToggle<CR>", { silent = true })                                  --> File > Tree
 map("n", "<space>fec", ":vsplit config/application.yml<CR>", { silent = true })              --> File > Editor > Rails application.yml
 map("n", "<space>fed", ":vsplit ~/.config/nvim/init.lua<CR>", { silent = true })             --> File > Editor > Definition
 map("n", "<space>fez", ":vsplit ~/.zshrc<CR>", { silent = true })                            --> File > Editor > ZSH
@@ -58,7 +58,7 @@ map("n", "<space>fyN", ':let @+=expand("%:t") | echo @+<CR>', { silent = true })
 ----------------------------------------------------
 -- SECTION: Session
 ----------------------------------------------------
-map("n", "<space>sq", ":tabdo NERDTreeClose<CR>:mksession! Session.vim<CR>:qa!<CR>") --> Session > Save & Quit
+map("n", "<space>sq", ":tabdo TreeClose<CR>:mksession! Session.vim<CR>:qa!<CR>") --> Session > Save & Quit
 map("n", "<space>sl", ":source Session.vim<CR>", { silent = true })            --> Session > Load
 ----------------------------------------------------
 -- SECTION: Search

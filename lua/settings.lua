@@ -38,7 +38,7 @@ opt.autoindent = true
 opt.smartindent = true
 opt.autoread = true
 opt.clipboard = { "unnamed", "unnamedplus" }
-opt.cursorline = true
+opt.cursorline = false
 opt.expandtab = true
 opt.modeline = false
 opt.number = true
@@ -59,6 +59,7 @@ opt.signcolumn = "yes"
 opt.shortmess:append({ c = true })
 opt.switchbuf:append({ "useopen" })
 opt.mouse = nil
+opt.termguicolors = true
 ----------------------------------------------------
 -- SECTION: Search
 ----------------------------------------------------

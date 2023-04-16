@@ -83,7 +83,7 @@ require("lualine").setup({
   tabline = {},
   extensions = {
     "fzf",
-    "nerdtree",
+    "nvim-tree",
     "quickfix",
   },
 })

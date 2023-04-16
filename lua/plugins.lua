@@ -43,12 +43,7 @@ return require("packer").startup({
     use("matze/vim-move")
     use("ntpeters/vim-better-whitespace")
     use("preservim/nerdcommenter")
-    use({
-      "preservim/nerdtree",
-      requires = {
-        "Xuyuanp/nerdtree-git-plugin",
-      },
-    })
+    use("nvim-tree/nvim-tree.lua")
     use("szw/vim-maximizer")
     use("tpope/vim-projectionist")
     use("tpope/vim-repeat")
@@ -81,9 +76,19 @@ return require("packer").startup({
     })
 
     -- GROUP: Deprecated
-    -- use("sindrets/diffview.nvim")
+    --
+    ---- GROUP: Basic
+    -- use({
+    -- "preservim/nerdtree",
+    -- requires = {
+    -- "Xuyuanp/nerdtree-git-plugin",
+    -- },
+    -- })
     -- use("tpope/vim-obsession")
     -- use("akinsho/nvim-toggleterm.lua")
+    --
+    ---- GROUP: GIT
+    -- use("sindrets/diffview.nvim")
   end,
   config = {
     compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua",
