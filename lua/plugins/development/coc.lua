@@ -2,7 +2,6 @@
 -- https://github.com/neoclide/coc.nvim
 ----------------------------------------------------
 g.coc_global_extensions = {
-  "coc-snippets",
   -- https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
   "coc-eslint",
   "coc-json",
@@ -22,81 +21,114 @@ g.coc_global_extensions = {
 }
 
 ----------------------------------------------------
--- SECTION: <TAB> for Completion
+-- SECTION: Initialization
 ----------------------------------------------------
-cmd([[
-  inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
-  inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
-]])
+_G.CocUtils = {}
+
+_G.CocUtils.check_back_space = function()
+  local col = vim.fn.col(".") - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match("%s") ~= nil
+end
+
+_G.CocUtils.show_docs = function()
+  local cw = vim.fn.expand("<cword>")
+  if vim.fn.index({ "vim", "help" }, vim.bo.filetype) >= 0 then
+    vim.api.nvim_command("h " .. cw)
+  elseif vim.api.nvim_eval("coc#rpc#ready()") then
+    vim.fn.CocActionAsync("doHover")
+  else
+    vim.api.nvim_command("!" .. vim.o.keywordprg .. " " .. cw)
+  end
+end
 
 ----------------------------------------------------
--- SECTION: Snippets
+-- SECTION: <TAB> for Completion
 ----------------------------------------------------
-cmd([[
-  imap <C-l> <Plug>(coc-snippets-expand)
-  vmap <C-j> <Plug>(coc-snippets-select)
-  let g:coc_snippet_next = '<c-j>'
-  let g:coc_snippet_prev = '<c-k>'
-  imap <C-j> <Plug>(coc-snippets-expand-jump)
-]])
+local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
+map(
+  "i",
+  "<TAB>",
+  'coc#pum#visible() ? coc#pum#next(1) : v:lua.CocUtils.check_back_space() ? "<TAB>" : coc#refresh()',
+  opts
+)
+map("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 ----------------------------------------------------
 -- SECTION: Remap <C-j> and <C-k> for scroll float windows/popups.
 ----------------------------------------------------
-cmd([[
-  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-  inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-  inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-  vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
-  vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
-]])
+local opts = { silent = true, nowait = true, expr = true }
+map("n", "<C-u>", 'coc#float#has_scroll() ? coc#float#scroll(0, 1) : "<C-u>"', opts)
+map("n", "<C-d>", 'coc#float#has_scroll() ? coc#float#scroll(1, 1) : "<C-d>"', opts)
+map("i", "<C-u>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0, 1)<cr>" : "<Left>"', opts)
+map("i", "<C-d>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1, 1)<cr>" : "<Right>"', opts)
+map("v", "<C-u>", 'coc#float#has_scroll() ? coc#float#scroll(0, 1) : "<C-u>"', opts)
+map("v", "<C-d>", 'coc#float#has_scroll() ? coc#float#scroll(1, 1) : "<C-d>"', opts)
+
+map("n", "<leader>?", "<CMD>lua _G.CocUtils.show_docs()<CR>", { silent = true })
 
 ----------------------------------------------------
 -- SECTION: GoTo Code Navigation
 ----------------------------------------------------
-cmd([[
-  nmap <silent> gdd <Plug>(coc-definition)
-  nmap <silent> gdv :call CocAction('jumpDefinition', 'vsplit') <CR>
-  nmap <silent> gds :call CocAction('jumpDefinition', 'split') <CR>
-  nmap <silent> gdt :call CocAction('jumpDefinition', 'tabedit') <CR>
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references)
-]])
+local opts = { silent = true }
+
+map("n", "gdd", "<Plug>(coc-definition)", opts)
+map("n", "gdv", ":call CocAction('jumpDefinition', 'vsplit')<cr>", opts)
+map("n", "gds", ":call CocAction('jumpDefinition', 'split')<cr>", opts)
+map("n", "gdt", ":call CocAction('jumpDefinition', 'tabedit')<cr>", opts)
+map("n", "gy", "<Plug>(coc-type-definition)", opts)
+map("n", "gi", "<Plug>(coc-implementation)", opts)
+map("n", "gr", "<Plug>(coc-references)", opts)
 
 ----------------------------------------------------
 -- SECTION: Linting -> Fixing
 ----------------------------------------------------
-cmd([[
-  vmap <leader>ff <Plug>(coc-format-selected)
-  nmap <silent> <leader>ff :call CocActionAsync('format')<CR>
-]])
+local opts = { silent = true }
+map("v", "<leader>ff", "<Plug>(coc-format-selected)", opts)
+map("n", "<leader>ff", ":call CocActionAsync('format')<cr>", opts)
 
 ----------------------------------------------------
 -- SECTION: Diagnostics -> Taking Action
 ----------------------------------------------------
-cmd([[
-  nmap <silent> [d <Plug>(coc-diagnostic-prev)
-  nmap <silent> ]d <Plug>(coc-diagnostic-next)
-  vmap <leader>ac <Plug>(coc-codeaction-selected)
-  nmap <silent> <leader>ac <Plug>(coc-codeaction)
-]])
+local opts = { silent = true, nowait = true }
+map("n", "[d", "<Plug>(coc-diagnostic-prev)", opts)
+map("n", "]d", "<Plug>(coc-diagnostic-next)", opts)
+map("x", "<leader>ac", "<Plug>(coc-codeaction-selected)", opts) --> CodeActions to selected code block (`<leader>aap` for current paragraph)
+map("v", "<leader>ac", "<Plug>(coc-codeaction-selected)", opts) --> CodeActions to visual block
+map("n", "<leader>al", "<Plug>(coc-codeaction-cursor)", opts)   --> CodeActions at cursor position
+map("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)          --> CodeActions to current buffer
+
+----------------------------------------------------
+-- SECTION: Create User Command
+----------------------------------------------------
+vim.api.nvim_create_user_command("Format", "call CocAction('format')", {})
+vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'editor.action.organizeImport')", {})
+
+----------------------------------------------------
+-- SECTION: Mappings
+----------------------------------------------------
+local opts = { silent = true, nowait = true }
+map("n", "<space>ca", ":<C-u>CocList diagnostics<cr>", opts) --> Show all diagnostics
+map("n", "<space>ce", ":<C-u>CocList extensions<cr>", opts)  --> Manage extensions
+map("n", "<space>cc", ":<C-u>CocList commands<cr>", opts)    --> Show commands
+map("n", "<space>co", ":<C-u>CocList outline<cr>", opts)     --> Find symbol of current document
+map("n", "<space>cs", ":<C-u>CocList -I symbols<cr>", opts)  --> Search workspace symbols
+map("n", "<space>cj", ":<C-u>CocNext<cr>", opts)             --> Do default action for next item
+map("n", "<space>ck", ":<C-u>CocPrev<cr>", opts)             --> Do default action for previous item
+map("n", "<space>cp", ":<C-u>CocListResume<cr>", opts)       --> Resume latest coc list
 
 ----------------------------------------------------
 -- SECTION: Misc
 ----------------------------------------------------
-cmd([[
-  command! -nargs=0 Format :call CocActionAsync('format')
+vim.api.nvim_create_augroup("LanguageSpecific", {})
 
-  nnoremap <silent><nowait> <space>ca :<C-u>CocList diagnostics<cr>
-  nnoremap <silent><nowait> <space>ce :<C-u>CocList extensions<cr>
-  nnoremap <silent><nowait> <space>cc :<C-u>CocList commands<cr>
+vim.api.nvim_create_autocmd("FileType", {
+  group = "LanguageSpecific",
+  pattern = "python",
+  command = "let b:coc_root_patterns = ['.git', '.env']",
+})
 
-  augroup BufferTest
-    autocmd!
-    autocmd FileType cs setlocal shiftwidth=4 tabstop=4
-  augroup END
-
-  autocmd FileType python let b:coc_root_patterns = ['.git', '.env']
-]])
+vim.api.nvim_create_autocmd("FileType", {
+  group = "LanguageSpecific",
+  pattern = "cs",
+  command = "setlocal shiftwidth=4 tabstop=4",
+})

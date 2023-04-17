@@ -18,7 +18,7 @@ for _, plugin in pairs({
   "spellfile_plugin",
   "matchit",
 }) do
-  g["loaded_" .. plugin] = 1
+  g["loaded_" .. plugin] = 0
 end
 ----------------------------------------------------
 -- SECTION: Important
@@ -84,3 +84,19 @@ map("n", "zV", ":normal zMzvzz<CR>")
 -- SECTION: Commands
 ----------------------------------------------------
 cmd("command! -nargs=? Browse lua _G.MUtils.open_in_browser(<q-args>)")
+----------------------------------------------------
+-- SECTION: Language Specific
+----------------------------------------------------
+vim.api.nvim_create_augroup("LanguageSpecific", {})
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = "LanguageSpecific",
+  pattern = "python",
+  command = "let b:coc_root_patterns = ['.git', '.env']",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = "LanguageSpecific",
+  pattern = "cs",
+  command = "setlocal shiftwidth=4 tabstop=4",
+})

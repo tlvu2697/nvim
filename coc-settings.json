@@ -9,20 +9,32 @@
   },
   "coc.preferences.extensionUpdateCheck": "daily",
   "list.normalMappings": {
+    "t": "action:tabe",
     "v": "action:vsplit",
-    "s": "action:split"
+    "s": "action:split",
+    "d": "expr:GetDeleteAction"
+  },
+  "list.insertMappings": {
+    "<C-t>": "action:tabe",
+    "<C-w>": "command:wincmd k"
   },
 
   /* completion settings */
   "suggest.noselect": true,
-  "coc.source.file.enable": false,
   "coc.source.around.enable": true,
   "coc.source.buffer.enable": true,
+  "coc.source.file.enable": false,
   "coc.source.tag.enable": true,
 
   "coc.source.around.priority": 30,
   "coc.source.buffer.priority": 20,
   "coc.source.tag.priority": 10,
+
+  "coc.source.around.shortcut": "Around",
+  "coc.source.buffer.shortcut": "Buffer",
+  "coc.source.file.shortcut": "File",
+  "coc.source.tag.shortcut": "Tag",
+  "coc.source.word.shortcut": "Dict",
 
   /* diagnostic settings */
   "diagnostic.messageTarget": "float",
@@ -35,7 +47,7 @@
   "solargraph.formatting": true,
   "solargraph.promptDownload": true,
   "solargraph.checkGemVersion": true,
-  "solargraph.symbols": false,
+  "solargraph.commandPath": "$HOME/.asdf/installs/ruby/$GLOBAL_RUBY_VERSION/bin/solargraph",
 
   /* coc-eslint */
   "eslint.autoFixOnSave": false,
