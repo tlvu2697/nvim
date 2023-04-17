@@ -60,6 +60,9 @@
   "javascript.suggestionActions.enabled": false,
   "typescript.suggestionActions.enabled": false,
 
+  /* coc-prettier */
+  "prettier.statusItemText": "",
+
   /* coc-spell-check */
   "cSpell.language": "en",
   "cSpell.enabledLanguageIds": ["markdown"],

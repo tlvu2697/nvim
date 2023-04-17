@@ -9,7 +9,6 @@ g.coc_global_extensions = {
   "coc-protobuf",
   "coc-pyright",
   "coc-solargraph",
-  "coc-spell-checker",
   "coc-sql",
   "coc-stylua",
   "coc-tsserver",
@@ -119,3 +118,11 @@ map("n", "<space>cp", ":<C-u>CocListResume<cr>", opts)       --> Resume latest c
 ----------------------------------------------------
 -- SECTION: Misc
 ----------------------------------------------------
+cmd([[
+  inoremap <silent><expr> <cr> coc#pum#visible() && coc#pum#info()['index'] != -1 ? coc#pum#confirm() : "\<C-g>u\<CR>"
+]])
+
+vim.api.nvim_create_autocmd("User", {
+  pattern = "CocStatusChange",
+  command = "lua vim.g.coc_last_status = string.gsub(vim.g.coc_status, '%%', ''); require('lualine').refresh()",
+})
