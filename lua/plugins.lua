@@ -42,8 +42,13 @@ return require("packer").startup({
     use("lukas-reineke/indent-blankline.nvim")
     use("matze/vim-move")
     use("ntpeters/vim-better-whitespace")
-    use("preservim/nerdcommenter")
-    use("nvim-tree/nvim-tree.lua")
+    use("numToStr/Comment.nvim")
+    use({
+      "nvim-tree/nvim-tree.lua",
+      requires = {
+        "nvim-tree/nvim-web-devicons",
+      },
+    })
     use("szw/vim-maximizer")
     use("tpope/vim-projectionist")
     use("tpope/vim-repeat")
@@ -78,14 +83,15 @@ return require("packer").startup({
     -- GROUP: Deprecated
     --
     ---- GROUP: Basic
-    -- use({
-    -- "preservim/nerdtree",
-    -- requires = {
-    -- "Xuyuanp/nerdtree-git-plugin",
-    -- },
-    -- })
-    -- use("tpope/vim-obsession")
     -- use("akinsho/nvim-toggleterm.lua")
+    -- use({
+    --   "preservim/nerdtree",
+    --   requires = {
+    --     "Xuyuanp/nerdtree-git-plugin",
+    --   },
+    -- })
+    -- use("preservim/nerdcommenter")
+    -- use("tpope/vim-obsession")
     --
     ---- GROUP: GIT
     -- use("sindrets/diffview.nvim")
