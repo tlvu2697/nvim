@@ -49,7 +49,7 @@ require("lualine").setup({
         update_in_insert = true,
         always_visible = false,
       },
-      { "vim.trim(g.coc_last_status)" },
+      { "g:trimmed_coc_status" },
     },
     lualine_y = { "filetype" },
     lualine_z = { "location" },

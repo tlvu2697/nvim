@@ -8,15 +8,23 @@
     }
   },
   "coc.preferences.extensionUpdateCheck": "daily",
+
+  /* Coc List */
+  "list.height": 25,
   "list.normalMappings": {
     "t": "action:tabe",
     "v": "action:vsplit",
     "s": "action:split",
+    "<C-j>": "do:next",
+    "<C-k>": "do:previous",
     "d": "expr:GetDeleteAction"
   },
   "list.insertMappings": {
     "<C-t>": "action:tabe",
-    "<C-w>": "command:wincmd k"
+    "<C-v>": "action:vsplit",
+    "<C-s>": "action:split",
+    "<C-u>": "feedkeys:\\<C-u>",
+    "<C-d>": "feedkeys:\\<C-d>"
   },
 
   /* completion settings */

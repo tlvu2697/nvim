@@ -63,7 +63,7 @@ require("nvim-tree").setup({
   },
   on_attach = on_attach_,
   git = {
-    timeout = 1000, -- 1 second
+    timeout = 5000, -- 5 seconds
   },
 })
 

@@ -106,10 +106,12 @@ vim.api.nvim_create_user_command("OR", "call CocActionAsync('runCommand', 'edito
 -- SECTION: Mappings
 ----------------------------------------------------
 local opts = { silent = true, nowait = true }
+map("n", "<space>cl", ":<C-u>CocList <cr>", opts)            --> CocList
 map("n", "<space>ca", ":<C-u>CocList diagnostics<cr>", opts) --> Show all diagnostics
 map("n", "<space>ce", ":<C-u>CocList extensions<cr>", opts)  --> Manage extensions
 map("n", "<space>cc", ":<C-u>CocList commands<cr>", opts)    --> Show commands
 map("n", "<space>co", ":<C-u>CocList outline<cr>", opts)     --> Find symbol of current document
+map("n", "<space>cq", ":<C-u>CocList quickfix<cr>", opts)    --> Quickfix list
 map("n", "<space>cs", ":<C-u>CocList -I symbols<cr>", opts)  --> Search workspace symbols
 map("n", "<space>cj", ":<C-u>CocNext<cr>", opts)             --> Do default action for next item
 map("n", "<space>ck", ":<C-u>CocPrev<cr>", opts)             --> Do default action for previous item
@@ -124,5 +126,8 @@ cmd([[
 
 vim.api.nvim_create_autocmd("User", {
   pattern = "CocStatusChange",
-  command = "lua vim.g.coc_last_status = string.gsub(vim.g.coc_status, '%%', ''); require('lualine').refresh()",
+  callback = function()
+    vim.g.trimmed_coc_status = vim.trim(vim.g.coc_status)
+    require("lualine").refresh()
+  end,
 })
