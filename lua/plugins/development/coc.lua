@@ -2,6 +2,7 @@
 -- https://github.com/neoclide/coc.nvim
 ----------------------------------------------------
 g.coc_global_extensions = {
+  "coc-lists",
   -- https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
   "coc-eslint",
   "coc-json",
