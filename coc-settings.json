@@ -55,7 +55,6 @@
   "solargraph.formatting": true,
   "solargraph.promptDownload": true,
   "solargraph.checkGemVersion": true,
-  "solargraph.commandPath": "$HOME/.asdf/installs/ruby/$GLOBAL_RUBY_VERSION/bin/solargraph",
 
   /* coc-eslint */
   "eslint.autoFixOnSave": false,
