@@ -47,7 +47,7 @@ local function on_attach_(bufnr)
   vim.keymap.set("n", "t",     api.node.open.tab,                opts("Open: New Tab"))
   vim.keymap.set("n", "v",     api.node.open.vertical,           opts("Open: Vertical Split"))
   vim.keymap.set("n", "s",     api.node.open.horizontal,         opts("Open: Horizontal Split"))
-  vim.keymap.set("n", ">",     toggle_all_files_filter,          opts("Toggle Hidden"))
+  vim.keymap.set("n", "I",     toggle_all_files_filter,          opts("Toggle Hidden"))
 end
 
 require("nvim-tree").setup({
