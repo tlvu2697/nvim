@@ -75,8 +75,11 @@ map("n", "gdd", "<Plug>(coc-definition)", opts)
 map("n", "gdv", ":call CocAction('jumpDefinition', 'vsplit')<cr>", opts)
 map("n", "gds", ":call CocAction('jumpDefinition', 'split')<cr>", opts)
 map("n", "gdt", ":call CocAction('jumpDefinition', 'tabedit')<cr>", opts)
+map("n", "gii", "<Plug>(coc-implementation)", opts)
+map("n", "giv", ":call CocAction('jumpImplementation', 'vsplit')<cr>", opts)
+map("n", "gis", ":call CocAction('jumpImplementation', 'split')<cr>", opts)
+map("n", "git", ":call CocAction('jumpImplementation', 'tabedit')<cr>", opts)
 map("n", "gy", "<Plug>(coc-type-definition)", opts)
-map("n", "gi", "<Plug>(coc-implementation)", opts)
 map("n", "gr", "<Plug>(coc-references)", opts)
 
 ----------------------------------------------------
