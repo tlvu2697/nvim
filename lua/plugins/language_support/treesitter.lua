@@ -17,10 +17,13 @@ require("nvim-treesitter.configs").setup({
     "json",
     "lua",
     "markdown",
+    "markdown_inline",
     "proto",
     "python",
+    "regex",
     "ruby",
     "typescript",
+    "vim",
     "yaml",
   },
   highlight = {

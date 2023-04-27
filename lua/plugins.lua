@@ -30,6 +30,13 @@ return require("packer").startup({
     -- GROUP: Basic
     use("benmills/vimux")
     use("chentoast/marks.nvim")
+    use({
+      "folke/noice.nvim",
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "rcarriga/nvim-notify",
+      },
+    })
     use("gcmt/taboo.vim")
     use({
       "junegunn/fzf",
@@ -97,6 +104,6 @@ return require("packer").startup({
     -- use("sindrets/diffview.nvim")
   end,
   config = {
-    compile_path = vim.fn.stdpath("config") .. "/lua/packer_compiled.lua",
+    log = { level = "warn" },
   },
 })
