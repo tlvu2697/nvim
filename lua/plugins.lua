@@ -44,7 +44,7 @@ return require("packer").startup({
         vim.fn["fzf#install"]()
       end,
     })
-    use("junegunn/fzf.vim")
+    use({ "tlvu2697/fzf.vim", branch = "release" })
     use("junegunn/vim-easy-align")
     use("lukas-reineke/indent-blankline.nvim")
     use("matze/vim-move")
