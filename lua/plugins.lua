@@ -30,13 +30,6 @@ return require("packer").startup({
     -- GROUP: Basic
     use("benmills/vimux")
     use("chentoast/marks.nvim")
-    use({
-      "folke/noice.nvim",
-      requires = {
-        "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
-      },
-    })
     use("gcmt/taboo.vim")
     use({
       "junegunn/fzf",
@@ -73,12 +66,11 @@ return require("packer").startup({
     -- GROUP: GIT
     use("junegunn/gv.vim")
     use("kdheepak/lazygit.nvim")
-    use("lewis6991/gitsigns.nvim")
+    use({ "lewis6991/gitsigns.nvim", tag = "release" })
     use("tpope/vim-fugitive")
     use("tpope/vim-rhubarb")
 
     -- GROUP: Languages
-    use("galooshi/vim-import-js")
     use("pangloss/vim-javascript")
     use({
       "iamcco/markdown-preview.nvim",
@@ -92,6 +84,13 @@ return require("packer").startup({
     ---- GROUP: Basic
     -- use("akinsho/nvim-toggleterm.lua")
     -- use({
+    --   "folke/noice.nvim",
+    --   requires = {
+    --     "MunifTanjim/nui.nvim",
+    --     "rcarriga/nvim-notify",
+    --   },
+    -- })
+    -- use({
     --   "preservim/nerdtree",
     --   requires = {
     --     "Xuyuanp/nerdtree-git-plugin",
@@ -102,6 +101,9 @@ return require("packer").startup({
     --
     ---- GROUP: GIT
     -- use("sindrets/diffview.nvim")
+    --
+    ---- GROUP: Languages
+    -- use("galooshi/vim-import-js")
   end,
   config = {
     log = { level = "warn" },
