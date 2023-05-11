@@ -73,19 +73,17 @@ local javascript = {
 local typescript = {
   ["*.ts"] = {
     alternate = {
-      "{dirname}/__tests__/{basename}.spec.js",
-      "{dirname}/__tests__/integration.spec.js",
+      "{dirname}/__tests__/{basename}.spec.ts",
       "{dirname}/__test__/{basename}.spec.js",
-      "{dirname}/__test__/integration.spec.js",
     },
     type = "source",
   },
   ["*.tsx"] = {
     alternate = {
-      "{dirname}/__tests__/{basename}.spec.js",
-      "{dirname}/__tests__/integration.spec.js",
-      "{dirname}/__test__/{basename}.spec.js",
-      "{dirname}/__test__/integration.spec.js",
+      "{dirname}/__tests__/{basename}.spec.tsx",
+      "{dirname}/__tests__/integration.spec.tsx",
+      "{dirname}/__test__/{basename}.spec.tsx",
+      "{dirname}/__test__/integration.spec.tsx",
     },
     type = "source",
   },
