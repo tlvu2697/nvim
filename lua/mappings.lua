@@ -36,25 +36,25 @@ map("n", "<space><S-Tab>", "gT", { silent = true })   --> Tab > Previous
 ----------------------------------------------------
 -- SECTION: Files
 ----------------------------------------------------
-map("n", "<space><space>", "<ESC>:w<CR>", { silent = true })                                 --> File > Save
-map("n", "<space>e", "<ESC>:e<CR>", { silent = true })                                       --> File > Refresh
-map("n", "<space>q", "<ESC>:q<CR>", { silent = true })                                       --> File > Close
-map("n", "<space>wq", "<ESC>:wq<CR>", { silent = true })                                     --> File > Save & Close
-map("n", "<space>ft", ":TreeToggle<CR>", { silent = true })                                  --> File > Tree
-map("n", "<space>fec", ":vsplit config/application.yml<CR>", { silent = true })              --> File > Editor > Rails application.yml
-map("n", "<space>fed", ":vsplit ~/.config/nvim/init.lua<CR>", { silent = true })             --> File > Editor > Definition
-map("n", "<space>fez", ":vsplit ~/.zshrc<CR>", { silent = true })                            --> File > Editor > ZSH
-map("n", "<space>fet", ":vsplit ~/.tmux.conf<CR>", { silent = true })                        --> File > Editor > Tmux
-map("n", "<space>fer", '<cmd>lua require("utils").reloadConfig()<CR>')                           --> File > Editor > Restart
-map("n", "<space>ff", ":Files %:p:h<CR>", { silent = true })                                 --> File > Find > File in Current Directory
-map("n", "<space>fh", ":History<CR>", { silent = true })                                     --> File > Find > File in History
-map("n", "<space>fc", ':saveas <C-R>=expand("%:p:h")<CR>/')                                  --> File > Copy
-map("n", "<space>fyd", ':let @+=expand("%:h") | echo @+<CR>', { silent = true })             --> File > Yank > Directory Path
-map("n", "<space>fyy", ':let @+=expand("%") | echo @+<CR>', { silent = true })               --> File > Yank > Relative File Path
-map("n", "<space>fyl", ':let @+=expand("%").":".line(".") | echo @+<CR>', { silent = true }) --> File > Yank > Relative File Path with Line number
-map("n", "<space>fyY", ':let @+=expand("%:p") | echo @+<CR>', { silent = true })             --> File > Yank > Full File Path
-map("n", "<space>fyn", ':let @+=expand("%:t:r") | echo @+<CR>', { silent = true })           --> File > Yank > File Name without extension
-map("n", "<space>fyN", ':let @+=expand("%:t") | echo @+<CR>', { silent = true })             --> File > Yank > File Name with extension
+map("n", "<space><space>", "<ESC>:w<CR>", { silent = true })                                                      --> File > Save
+map("n", "<space>e", "<ESC>:e<CR>", { silent = true })                                                            --> File > Refresh
+map("n", "<space>q", "<ESC>:q<CR>", { silent = true })                                                            --> File > Close
+map("n", "<space>wq", "<ESC>:wq<CR>", { silent = true })                                                          --> File > Save & Close
+map("n", "<space>ft", ":TreeToggle<CR>", { silent = true })                                                       --> File > Tree
+map("n", "<space>fec", ":vsplit config/application.yml<CR>", { silent = true })                                   --> File > Editor > Rails application.yml
+map("n", "<space>fed", ":vsplit ~/.config/nvim/init.lua<CR>", { silent = true })                                  --> File > Editor > Definition
+map("n", "<space>fez", ":vsplit ~/.zshrc<CR>", { silent = true })                                                 --> File > Editor > ZSH
+map("n", "<space>fet", ":vsplit ~/.tmux.conf<CR>", { silent = true })                                             --> File > Editor > Tmux
+map("n", "<space>fer", '<cmd>lua require("utils").reloadConfig()<CR>')                                            --> File > Editor > Restart
+map("n", "<space>ff", ":Files %:p:h<CR>", { silent = true })                                                      --> File > Find > File in Current Directory
+map("n", "<space>fh", ":History<CR>", { silent = true })                                                          --> File > Find > File in History
+map("n", "<space>fc", ':saveas <C-R>=expand("%:p:h")<CR>/')                                                       --> File > Copy
+map("n", "<space>fyd", ':let @+=fnamemodify(expand("%:h"), ":~:.") | echo @+<CR>', { silent = true })             --> File > Yank > Directory Path
+map("n", "<space>fyy", ':let @+=fnamemodify(expand("%"), ":~:.") | echo @+<CR>', { silent = true })               --> File > Yank > Relative File Path
+map("n", "<space>fyl", ':let @+=fnamemodify(expand("%"), ":~:.").":".line(".") | echo @+<CR>', { silent = true }) --> File > Yank > Relative File Path with Line number
+map("n", "<space>fyY", ':let @+=expand("%:p") | echo @+<CR>', { silent = true })                                  --> File > Yank > Full File Path
+map("n", "<space>fyn", ':let @+=expand("%:t:r") | echo @+<CR>', { silent = true })                                --> File > Yank > File Name without extension
+map("n", "<space>fyN", ':let @+=expand("%:t") | echo @+<CR>', { silent = true })                                  --> File > Yank > File Name with extension
 ----------------------------------------------------
 -- SECTION: Session
 ----------------------------------------------------
