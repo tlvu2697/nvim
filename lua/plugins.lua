@@ -1,7 +1,5 @@
 return require("packer").startup({
   function()
-    use("lewis6991/impatient.nvim")
-
     -- GROUP: Self
     use("wbthomason/packer.nvim")
 

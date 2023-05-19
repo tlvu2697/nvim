@@ -1,6 +1,6 @@
 local start_time = vim.fn.reltime()
 
-require("impatient").enable_profile()
+vim.loader.enable()
 require("plugins")
 
 require("helper")
