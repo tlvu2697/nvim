@@ -27,7 +27,6 @@ return require("packer").startup({
 
     -- GROUP: Basic
     use("benmills/vimux")
-    use("chentoast/marks.nvim")
     use("gcmt/taboo.vim")
     use({
       "junegunn/fzf",
