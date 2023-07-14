@@ -18,7 +18,7 @@ for _, plugin in pairs({
   "spellfile_plugin",
   "matchit",
 }) do
-  g["loaded_" .. plugin] = 0
+  g["loaded_" .. plugin] = 1
 end
 ----------------------------------------------------
 -- SECTION: Important
@@ -59,7 +59,6 @@ opt.signcolumn = "yes"
 opt.shortmess:append({ c = true })
 opt.switchbuf:append({ "useopen" })
 opt.mouse = nil
-opt.termguicolors = true
 ----------------------------------------------------
 -- SECTION: Search
 ----------------------------------------------------
