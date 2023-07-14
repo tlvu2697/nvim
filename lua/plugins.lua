@@ -41,17 +41,18 @@ return require("packer").startup({
     use("matze/vim-move")
     use("ntpeters/vim-better-whitespace")
     use("numToStr/Comment.nvim")
-    use({
-      "nvim-tree/nvim-tree.lua",
-      requires = {
-        "nvim-tree/nvim-web-devicons",
-      },
-    })
     use("szw/vim-maximizer")
     use("tpope/vim-projectionist")
     use("tpope/vim-repeat")
     use("tpope/vim-surround")
     use("tpope/vim-unimpaired")
+    use({
+      "preservim/nerdtree",
+      requires = {
+        "Xuyuanp/nerdtree-git-plugin",
+        "ryanoasis/vim-devicons",
+      },
+    })
     use("phaazon/hop.nvim")
 
     -- GROUP: Development
@@ -89,9 +90,9 @@ return require("packer").startup({
     --   },
     -- })
     -- use({
-    --   "preservim/nerdtree",
+    --   "nvim-tree/nvim-tree.lua",
     --   requires = {
-    --     "Xuyuanp/nerdtree-git-plugin",
+    --     "nvim-tree/nvim-web-devicons",
     --   },
     -- })
     -- use("preservim/nerdcommenter")
