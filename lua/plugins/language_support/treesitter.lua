@@ -24,7 +24,6 @@ require("nvim-treesitter.configs").setup({
     "ruby",
     "sql",
     "typescript",
-    "vim",
     "yaml",
   },
   highlight = {
