@@ -54,6 +54,7 @@
   "solargraph.diagnostics": true,
   "solargraph.formatting": true,
   "solargraph.promptDownload": true,
+  "solargraph.checkGemVersion": false,
 
   /* coc-eslint */
   "eslint.autoFixOnSave": false,
