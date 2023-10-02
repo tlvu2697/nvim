@@ -3,5 +3,5 @@
 ----------------------------------------------------
 require("ibl").setup {
   indent = { char = "¦" },
-  scope = { enabled = true },
+  scope = { enabled = false },
 }
