@@ -63,7 +63,7 @@ return require("packer").startup({
     -- GROUP: GIT
     use("junegunn/gv.vim")
     use("kdheepak/lazygit.nvim")
-    use({ "lewis6991/gitsigns.nvim", tag = "release" })
+    use({ "lewis6991/gitsigns.nvim", branch = "release" })
     use("tpope/vim-fugitive")
     use("tpope/vim-rhubarb")
 
