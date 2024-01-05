@@ -10,6 +10,7 @@ g.coc_global_extensions = {
   "coc-protobuf",
   "coc-pyright",
   "coc-solargraph",
+  "coc-spell-checker",
   "coc-sql",
   "coc-stylua",
   "coc-tsserver",

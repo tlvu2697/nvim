@@ -55,6 +55,7 @@
   "solargraph.formatting": true,
   "solargraph.promptDownload": true,
   "solargraph.checkGemVersion": false,
+  "solargraph.commandPath": "G_solargraph",
 
   /* coc-eslint */
   "eslint.autoFixOnSave": false,
@@ -79,5 +80,6 @@
   "sql.formatOptions": {
     "language": "postgresql"
   },
+
   "snippets.ultisnips.pythonPrompt": false
 }
