@@ -55,7 +55,6 @@
   "solargraph.formatting": true,
   "solargraph.promptDownload": true,
   "solargraph.checkGemVersion": false,
-  "solargraph.commandPath": "G_solargraph",
 
   /* coc-eslint */
   "eslint.autoFixOnSave": false,
