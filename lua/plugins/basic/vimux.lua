@@ -1,7 +1,12 @@
 ----------------------------------------------------
 -- https://github.com/benmills/vimux
 ----------------------------------------------------
-g.VimuxOrientation = "h"
-g.VimuxHeight = "30"
-g.VimuxOrientation = "v"
-g.VimuxHeight = "30"
+return {
+  "benmills/vimux",
+  init = function()
+    g.VimuxOrientation = "h"
+    g.VimuxHeight = "30"
+    g.VimuxOrientation = "v"
+    g.VimuxHeight = "30"
+  end,
+}

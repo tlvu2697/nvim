@@ -50,27 +50,33 @@ local function on_attach_(bufnr)
   vim.keymap.set("n", "I",     toggle_all_files_filter,          opts("Toggle Hidden"))
 end
 
-require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    width = '20%',
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
-  on_attach = on_attach_,
-  git = {
-    timeout = 5000, -- 5 seconds
-  },
-})
-
 vim.api.nvim_create_user_command("TreeFind", "NvimTreeFindFile", {})
 vim.api.nvim_create_user_command("TreeClose", "NvimTreeClose", {})
 vim.api.nvim_create_user_command("TreeToggle", "NvimTreeToggle", {})
-
 vim.api.nvim_create_user_command("TreeFocus", function()
   require("nvim-tree.api").tree.focus()
 end, {})
+
+return {
+  "nvim-tree/nvim-tree.lua",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  main = 'nvim-tree',
+  opts = {
+    sort_by = "case_sensitive",
+    view = {
+      width = '20%',
+    },
+    renderer = {
+      group_empty = true,
+    },
+    filters = {
+      dotfiles = true,
+    },
+    on_attach = on_attach_,
+    git = {
+      timeout = 5000,   -- 5 seconds
+    },
+  }
+}

@@ -1,5 +1,10 @@
 ----------------------------------------------------
 -- https://github.com/junegunn/gv.vim
 ----------------------------------------------------
-map("n", "<leader>gv", ":%GV!<CR>", { silent = true })
-map("v", "<leader>gv", ":GV<CR>", { silent = true })
+return {
+  "junegunn/gv.vim",
+  config = function()
+    map("n", "<leader>gv", ":%GV!<CR>", { silent = true })
+    map("v", "<leader>gv", ":GV<CR>", { silent = true })
+  end,
+}

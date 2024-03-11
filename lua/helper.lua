@@ -4,8 +4,8 @@
 -- SECTION: Global Variables
 ----------------------------------------------------
 cmd = vim.cmd -- Executes multiple lines of Vimscript at once
-fn = vim.fn -- Invokes |vim-function| or |user-function| {func} with arguments {...}
-g = vim.g -- Global (|g:|) editor variables
+fn = vim.fn   -- Invokes |vim-function| or |user-function| {func} with arguments {...}
+g = vim.g     -- Global (|g:|) editor variables
 env = vim.env -- Environment variables defined in the editor session
 opt = vim.opt -- Conveniences for setting and controlling options
 ----------------------------------------------------
@@ -59,14 +59,4 @@ function tablesMerge(...)
   end
 
   return mergedTables
-end
-
-function sendEscape()
-  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<cr>", true, false, true), "m", true)
-end
-
-function requireAllAt(path)
-  for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath("config") .. "/lua/plugins/" .. path, [[v:val =~ '\.lua$']])) do
-    require("plugins." .. path .. "." .. file:gsub("%.lua$", ""))
-  end
 end

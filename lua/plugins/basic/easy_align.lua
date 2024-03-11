@@ -1,6 +1,11 @@
 ----------------------------------------------------
 -- https://github.com/junegunn/vim-easy-align
 ----------------------------------------------------
-cmd([[
-  xmap <leader>ea <Plug>(EasyAlign)
-]])
+return {
+  "junegunn/vim-easy-align",
+  config = function()
+    cmd([[
+      xmap <leader>ea <Plug>(EasyAlign)
+    ]])
+  end,
+}

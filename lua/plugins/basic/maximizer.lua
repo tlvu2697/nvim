@@ -1,4 +1,9 @@
 ----------------------------------------------------
 -- https://github.com/szw/vim-maximizer
 ----------------------------------------------------
-g.maximizer_set_default_mapping = 0
+return {
+  "szw/vim-maximizer",
+  init = function()
+    g.maximizer_set_default_mapping = 0
+  end,
+}
