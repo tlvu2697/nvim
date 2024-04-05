@@ -59,6 +59,7 @@
   /* coc-eslint */
   "eslint.autoFixOnSave": false,
   "eslint.run": "onSave",
+  "eslint.workingDirectories": ["./", "./apps/hr-web-app/"],
 
   /* coc-yaml */
   "yaml.format.enable": true,
