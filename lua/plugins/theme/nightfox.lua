@@ -16,7 +16,7 @@ return {
           enable = true,
         },
         treesitter = {
-          enable = true,
+          enable = false,
         },
         native_lsp = {
           enable = false,
