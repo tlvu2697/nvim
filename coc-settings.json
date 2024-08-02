@@ -81,5 +81,7 @@
     "language": "postgresql"
   },
 
-  "snippets.ultisnips.pythonPrompt": false
+  /* coc-tsserver */
+  "tsserver.useLocalTsdk": true,
+  "tsserver.tsdk": "${workspaceFolder}/node_modules/typescript/lib"
 }
