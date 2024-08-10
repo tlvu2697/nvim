@@ -82,6 +82,5 @@
   },
 
   /* coc-tsserver */
-  "tsserver.useLocalTsdk": true,
-  "tsserver.tsdk": "${workspaceFolder}/node_modules/typescript/lib"
+  "tsserver.maxTsServerMemory": 8192,
 }
