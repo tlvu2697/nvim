@@ -35,10 +35,11 @@ return {
       highlight = {
         enable = true,
         disable = { "vimdoc" },
-        additional_vim_regex_highlighting = false,
+        additional_vim_regex_highlighting = true,
       },
       indent = {
-        enable = true,
+        enable = false,
+        disable = { "ruby" }
       },
       autotag = { enable = true },
       autopairs = { enable = true },
