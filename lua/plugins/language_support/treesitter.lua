@@ -39,6 +39,7 @@ return {
       },
       indent = {
         enable = true,
+        disable = { "ruby" },
       },
       autotag = { enable = true },
       autopairs = { enable = true },
