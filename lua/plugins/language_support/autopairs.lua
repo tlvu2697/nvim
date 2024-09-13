@@ -8,7 +8,7 @@ return {
     g.completion_confirm_key = ""
     local npairs = require("nvim-autopairs")
     local Rule = require("nvim-autopairs.rule")
-    npairs.setup({ check_ts = true, map_cr = false })
+    npairs.setup({ map_cr = false })
 
     -- Confirm Completion with coc.nvim
     _G.MUtils.completion_confirm = function()
