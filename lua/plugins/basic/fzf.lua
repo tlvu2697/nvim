@@ -13,7 +13,7 @@ return {
   init = function()
     env.FZF_DEFAULT_COMMAND =
     'rg --files --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!sorbet/rbi/*"'
-    env.FZF_DEFAULT_OPTS = "--bind 'ctrl-d:preview-down,ctrl-u:preview-up'"
+    env.FZF_DEFAULT_OPTS = "--bind 'ctrl-d:preview-half-page-down,ctrl-u:preview-half-page-up'"
 
     _G.MUtils.build_coc_quickfix_list = function(lines)
       local quickfix_list = {}
