@@ -84,3 +84,15 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "cs",
   command = "setlocal shiftwidth=4 tabstop=4",
 })
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+  group = "LanguageSpecific",
+  pattern = "*.js",
+  command = "set filetype=javascript.jsx",
+})
+
+vim.api.nvim_create_autocmd("BufRead", {
+  group = "LanguageSpecific",
+  pattern = "*.js",
+  command = "set filetype=javascript.jsx",
+})

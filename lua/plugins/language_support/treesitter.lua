@@ -35,7 +35,7 @@ return {
       highlight = {
         enable = true,
         disable = { "vimdoc" },
-        additional_vim_regex_highlighting = true,
+        additional_vim_regex_highlighting = false,
       },
       indent = {
         enable = false,
