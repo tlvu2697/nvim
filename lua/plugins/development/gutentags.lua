@@ -13,5 +13,6 @@ return {
       "node_modules",
       "*.vim/bundle/*",
     }
+    g.gutentags_modules = { "ctags" }
   end,
 }

@@ -75,6 +75,12 @@ vim.api.nvim_create_augroup("LanguageSpecific", {})
 
 vim.api.nvim_create_autocmd("FileType", {
   group = "LanguageSpecific",
+  pattern = "ruby",
+  command = "setlocal indentkeys-=.",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  group = "LanguageSpecific",
   pattern = "python",
   command = "let b:coc_root_patterns = ['.git', '.env']",
 })
@@ -95,4 +101,16 @@ vim.api.nvim_create_autocmd("BufRead", {
   group = "LanguageSpecific",
   pattern = "*.js",
   command = "set filetype=javascript.jsx",
+})
+
+vim.api.nvim_create_autocmd("BufNewFile", {
+  group = "LanguageSpecific",
+  pattern = "*.erb",
+  command = "set filetype=html",
+})
+
+vim.api.nvim_create_autocmd("BufRead", {
+  group = "LanguageSpecific",
+  pattern = "*.erb",
+  command = "set filetype=html",
 })
