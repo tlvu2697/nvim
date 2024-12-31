@@ -1,6 +1,5 @@
 ----------------------------------------------------
 -- SECTION: Important
-----------------------------------------------------
 g.mapleader = ","
 
 -- disable some default providers
@@ -8,60 +7,67 @@ for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
   g["loaded_" .. provider .. "_provider"] = 0
 end
 ----------------------------------------------------
--- SECTION: General
+-- SECTION: General Options
+vim.cmd("filetype plugin indent on")             -- Enable filetype plugins and indentation
+vim.opt.swapfile = false                         -- Disable swapfile
+vim.opt.autoread = true                          -- Reload files edited externally
+vim.opt.clipboard = { "unnamed", "unnamedplus" } -- Use system clipboard
+vim.opt.modeline = false                         -- Disable modeline
+vim.opt.updatetime = 100                         -- Faster completion and diagnostics updates
+vim.opt.encoding = "UTF-8"                       -- Set UTF-8 encoding
+vim.opt.wrap = true                              -- Enable line wrapping
+vim.wo.wrap = true                               -- Enable wrapping for current window
+vim.o.mouse = ""                                 -- Disable mouse support
 ----------------------------------------------------
-cmd("filetype plugin indent on")
-opt.swapfile = false
-opt.autoindent = true
-opt.smartindent = true
-opt.autoread = true
-opt.clipboard = { "unnamed", "unnamedplus" }
-opt.cursorline = false
-opt.expandtab = true
-opt.modeline = false
-opt.number = true
-opt.relativenumber = true
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.softtabstop = 2
-opt.splitright = true
-opt.splitbelow = true
-opt.re = 0
-opt.wildmenu = true
-opt.wrap = true
-vim.wo.wrap = true
-opt.backup = false
-opt.writebackup = false
-opt.updatetime = 100
-opt.signcolumn = "yes"
-opt.shortmess:append({ c = true })
-opt.switchbuf:append({ "useopen" })
-vim.o.mouse = ""
+-- SECTION: Indentation and Tabs
+vim.opt.autoindent = true                        -- Enable auto-indentation
+vim.opt.smartindent = true                       -- Enable smart indentation
+vim.opt.expandtab = true                         -- Use spaces instead of tabs
+vim.opt.tabstop = 2                              -- Number of spaces for a tab
+vim.opt.shiftwidth = 2                           -- Number of spaces for indentation
+vim.opt.softtabstop = 2                          -- Number of spaces for <Tab> in insert mode
 ----------------------------------------------------
--- SECTION: Theme
+-- SECTION: Window Management
+vim.opt.splitright = true                        -- Vertical splits open to the right
+vim.opt.splitbelow = true                        -- Horizontal splits open below
 ----------------------------------------------------
-opt.encoding = "UTF-8"
-opt.laststatus = 2
-opt.termguicolors = true
-opt.showmode = false
+-- SECTION: Search and Completion
+vim.opt.re = 2                                   -- Use auto regex engine
+vim.opt.wildmenu = true                          -- Enable command-line completion menu
+vim.opt.shortmess:append({ c = true })           -- Reduce completion messages
+vim.opt.switchbuf:append({ "useopen" })          -- Reuse open buffers
 ----------------------------------------------------
--- SECTION: Search
+-- SECTION: Backup and Update
+vim.opt.backup = false                           -- Disable backup files
+vim.opt.writebackup = false                      -- Disable write backup files
 ----------------------------------------------------
-opt.hlsearch = true
-opt.ignorecase = true
-opt.inccommand = "split"
-opt.incsearch = true
-opt.smartcase = true
+-- SECTION: Sign Column and UI
+vim.opt.signcolumn = "yes"                       -- Always show the sign column
+vim.opt.number = true                            -- Show absolute line numbers
+vim.opt.relativenumber = true                    -- Show relative line numbers
+vim.opt.cursorline = false                       -- Disable cursorline highlight
+vim.opt.termguicolors = true                     -- Enable GUI colors in the terminal
+vim.opt.laststatus = 2                           -- Always show status line
+vim.opt.showmode = false                         -- Hide mode information in the status line
+----------------------------------------------------
+-- SECTION: Search Settings
+vim.opt.hlsearch = true                          -- Highlight search results
+vim.opt.ignorecase = true                        -- Case-insensitive search
+vim.opt.inccommand = "split"                     -- Live preview for search/replace
+vim.opt.incsearch = true                         -- Highlight matches as you type
+vim.opt.smartcase = true                         -- Smart case sensitivity in search
+----------------------------------------------------
+-- SECTION: Folding
+vim.opt.foldenable = true                        -- Enable code folding
+vim.opt.foldlevelstart = 5                       -- Start with folds at level 5
+vim.opt.foldnestmax = 5                          -- Maximum fold nesting
+vim.opt.foldmethod = "indent"                    -- Fold based on indentation
+
+
+
 map("n", "<CR>", "<ESC>:noh<CR>", { silent = true })
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
-----------------------------------------------------
--- SECTION: Folding
-----------------------------------------------------
-opt.foldenable = true
-opt.foldlevelstart = 5
-opt.foldnestmax = 5
-opt.foldmethod = "indent"
 -- opt.foldexpr= 'nvim_treesitter#foldexpr()'
 map("n", "zV", ":normal zMzvzz<CR>")
 ----------------------------------------------------

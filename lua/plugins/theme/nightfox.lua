@@ -3,27 +3,7 @@
 ----------------------------------------------------
 return {
   "EdenEast/nightfox.nvim",
-  opts = {
-    options = {
-      modules = {
-        hop = {
-          enable = true,
-        },
-        gitsigns = {
-          enable = true,
-        },
-        coc = {
-          enable = true,
-        },
-        treesitter = {
-          enable = false,
-        },
-        native_lsp = {
-          enable = false,
-        },
-      },
-    },
-  },
+  opts = {},
   config = function(_, opts)
     require("nightfox").setup(opts)
 

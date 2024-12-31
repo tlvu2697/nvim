@@ -108,16 +108,6 @@ map("n", "<space>cib", ":TermCIBranch<CR>", { silent = true }) --> CircleCI for 
 map("n", "<leader>tb", ":TestFile<CR>", { silent = true })    --> Run test buffer
 map("n", "<leader>tt", ":TestNearest<CR>", { silent = true }) --> Run test at point
 map("n", "<leader>tl", ":TestLast<CR>", { silent = true })    --> Run last test
-cmd([[
-  augroup BufferTest
-    autocmd!
-    autocmd FileType javascript nnoremap <leader>tb :call VimuxRunCommand('yarn test' . ' ' . expand("%"))<CR>|
-    autocmd FileType javascript nnoremap <leader>tl :VimuxRunLastCommand<CR>|
-
-    autocmd FileType typescriptreact nnoremap <leader>tb :call VimuxRunCommand('yarn test' . ' ' . expand("%"))<CR>|
-    autocmd FileType typescriptreact nnoremap <leader>tl :VimuxRunLastCommand<CR>|
-  augroup END
-]])
 ----------------------------------------------------
 -- SECTION: Register
 ----------------------------------------------------

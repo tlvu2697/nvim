@@ -5,6 +5,47 @@
       "command": "csharp-ls",
       "rootPatterns": ["*.sln", "git"],
       "filetypes": ["cs", "csharp"]
+    },
+    "ruby-lsp": {
+      "command": "G_ruby-lsp",
+      "initializationOptions": {
+        "enabledFeatures": {
+          "codeActions": true,
+          "codeLens": true,
+          "completion": true,
+          "definition": true,
+          "diagnostics": true,
+          "documentHighlights": true,
+          "documentLink": true,
+          "documentSymbols": true,
+          "foldingRanges": true,
+          "formatting": true,
+          "hover": true,
+          "inlayHint": true,
+          "onTypeFormatting": true,
+          "selectionRanges": true,
+          "semanticHighlighting": true,
+          "signatureHelp": true,
+          "typeHierarchy": true,
+          "workspaceSymbol": true
+        }
+      },
+      "filetypes": ["ruby"],
+      "featuresConfiguration": {
+        "inlayHint": {
+          "implicitHashValue": true,
+          "implicitRescue": true
+        }
+      },
+      "indexing": {
+        "excludedPatterns": ["path/to/excluded/file.rb"],
+        "includedPatterns": ["path/to/included/file.rb"],
+        "excludedGems": ["gem1", "gem2", "etc."],
+        "excludedMagicComments": ["compiled:true"]
+      },
+      "formatter": "auto",
+      "linters": [],
+      "experimentalFeaturesEnabled": false
     }
   },
   "coc.preferences.extensionUpdateCheck": "daily",
@@ -74,5 +115,5 @@
   },
 
   /* coc-tsserver */
-  "tsserver.maxTsServerMemory": 8192,
+  "tsserver.maxTsServerMemory": 8192
 }

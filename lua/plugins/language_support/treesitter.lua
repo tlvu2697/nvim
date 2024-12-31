@@ -1,15 +1,32 @@
 ----------------------------------------------------
 -- https://github.com/nvim-treesitter/nvim-treesitter
--- https://github.com/andymass/vim-matchup
 -- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+-- https://github.com/andymass/vim-matchup
 -- https://github.com/windwp/nvim-ts-autotag
 ----------------------------------------------------
 return {
   "nvim-treesitter/nvim-treesitter",
   dependencies = {
-    "andymass/vim-matchup",
     "nvim-treesitter/nvim-treesitter-textobjects",
-    "windwp/nvim-ts-autotag",
+    "RRethy/nvim-treesitter-endwise",
+    {
+      "andymass/vim-matchup",
+      init = function()
+        g.matchup_matchparen_offscreen = { method = "none" }
+      end,
+    },
+    {
+      "windwp/nvim-ts-autotag",
+      config = function()
+        require('nvim-ts-autotag').setup({
+          opts = {
+            enable_close = true,         -- Auto close tags
+            enable_rename = true,        -- Auto rename pairs of tags
+            enable_close_on_slash = true -- Auto close on trailing </
+          }
+        })
+      end
+    }
   },
   build = ":TSUpdate",
   config = function()
@@ -17,35 +34,22 @@ return {
 
     configs.setup({
       ensure_installed = {
-        "bash",
-        "dockerfile",
-        "html",
-        "javascript",
-        "json",
         "lua",
-        "markdown",
-        "proto",
-        "python",
-        "regex",
         "ruby",
-        "sql",
-        "typescript",
-        "yaml",
       },
+      auto_install = true,
       highlight = {
         enable = true,
-        disable = { "vimdoc" },
-        additional_vim_regex_highlighting = false,
+        additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = {
         enable = true,
         disable = {
-          "yaml",
+          "ruby",
         }
       },
-      autotag = { enable = true },
-      autopairs = { enable = true },
       matchup = { enable = true },
+      endwise = { enable = true },
       textobjects = {
         select = {
           enable = true,
@@ -71,8 +75,5 @@ return {
         },
       },
     })
-  end,
-  init = function()
-    g.matchup_matchparen_offscreen = { method = "none" }
   end,
 }

@@ -12,7 +12,6 @@ return {
       "coc-json",
       "coc-prettier",
       "coc-pyright",
-      "coc-solargraph",
       "coc-sql",
       "coc-lua",
       "coc-tsserver",
