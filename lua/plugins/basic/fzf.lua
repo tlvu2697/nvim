@@ -4,12 +4,6 @@
 ----------------------------------------------------
 return {
   "junegunn/fzf.vim",
-  dependencies = {
-    "junegunn/fzf",
-    build = function()
-      fn["fzf#install"]()
-    end,
-  },
   init = function()
     env.FZF_DEFAULT_COMMAND =
     'rg --files --hidden --follow --glob "!.git/*" --glob "!node_modules/*" --glob "!sorbet/rbi/*"'
