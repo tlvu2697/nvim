@@ -102,7 +102,6 @@ return {
     map("v", "<leader>ac", "<Plug>(coc-codeaction-selected)", opts) --> CodeActions to visual block
     map("n", "<leader>al", "<Plug>(coc-codeaction-cursor)", opts)   --> CodeActions at cursor position
     map("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)          --> CodeActions to current buffer
-    map("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)          --> CodeActions to current buffer
     map("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)         --> Apply preferred quickfix action on current line
 
     ----------------------------------------------------
@@ -112,12 +111,6 @@ return {
     map("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", opts)
     map("v", "<leader>re", "<Plug>(coc-codeaction-refactor-selected)", opts)
     map("n", "<leader>rn", "<Plug>(coc-rename)", opts)
-
-    ----------------------------------------------------
-    -- SECTION: Diagnostics -> CodeLens
-    ----------------------------------------------------
-    local opts = { silent = true, nowait = true }
-    map("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
 
     ----------------------------------------------------
     -- SECTION: Create User Command
