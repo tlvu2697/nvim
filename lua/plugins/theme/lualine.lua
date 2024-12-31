@@ -13,10 +13,9 @@ return {
     },
     sections = {
       lualine_a = { "mode" },
-      lualine_b = {},
+      lualine_b = { "filename" },
       lualine_c = {
-        { "filename" },
-        { "b:gitsigns_status" }
+        "b:gitsigns_status",
       },
       lualine_x = {
         {
@@ -34,10 +33,9 @@ return {
     },
     inactive_sections = {
       lualine_a = {},
-      lualine_b = {},
+      lualine_b = { "filename" },
       lualine_c = {
-        { "filename" },
-        { "b:gitsigns_status" }
+        "b:gitsigns_status",
       },
       lualine_x = {
         {

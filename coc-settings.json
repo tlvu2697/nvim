@@ -67,6 +67,7 @@
     "<C-u>": "feedkeys:\\<C-u>",
     "<C-d>": "feedkeys:\\<C-d>"
   },
+  "list.maxPreviewHeight": 25,
 
   /* completion settings */
   "suggest.noselect": true,

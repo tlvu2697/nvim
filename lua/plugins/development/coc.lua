@@ -57,15 +57,15 @@ return {
     map("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
     ----------------------------------------------------
-    -- SECTION: Remap <C-j> and <C-k> for scroll float windows/popups.
+    -- SECTION: Remap <C-u> and <C-d> for scroll float windows/popups.
     ----------------------------------------------------
     local opts = { silent = true, nowait = true, expr = true }
-    map("n", "<C-u>", 'coc#float#has_scroll() ? coc#float#scroll(0, 1) : "<C-u>"', opts)
-    map("n", "<C-d>", 'coc#float#has_scroll() ? coc#float#scroll(1, 1) : "<C-d>"', opts)
-    map("i", "<C-u>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0, 1)<cr>" : "<Left>"', opts)
-    map("i", "<C-d>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1, 1)<cr>" : "<Right>"', opts)
-    map("v", "<C-u>", 'coc#float#has_scroll() ? coc#float#scroll(0, 1) : "<C-u>"', opts)
-    map("v", "<C-d>", 'coc#float#has_scroll() ? coc#float#scroll(1, 1) : "<C-d>"', opts)
+    map("n", "<C-u>", 'coc#float#has_scroll() ? coc#float#scroll(0, 5) : "<C-u>"', opts)
+    map("n", "<C-d>", 'coc#float#has_scroll() ? coc#float#scroll(1, 5) : "<C-d>"', opts)
+    map("i", "<C-u>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0, 5)<cr>" : "<Left>"', opts)
+    map("i", "<C-d>", 'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1, 5)<cr>" : "<Right>"', opts)
+    map("v", "<C-u>", 'coc#float#has_scroll() ? coc#float#scroll(0, 5) : "<C-u>"', opts)
+    map("v", "<C-d>", 'coc#float#has_scroll() ? coc#float#scroll(1, 5) : "<C-d>"', opts)
 
     map("n", "<leader>?", "<CMD>lua _G.CocUtils.show_docs()<CR>", { silent = true })
 
@@ -102,6 +102,22 @@ return {
     map("v", "<leader>ac", "<Plug>(coc-codeaction-selected)", opts) --> CodeActions to visual block
     map("n", "<leader>al", "<Plug>(coc-codeaction-cursor)", opts)   --> CodeActions at cursor position
     map("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)          --> CodeActions to current buffer
+    map("n", "<leader>ac", "<Plug>(coc-codeaction)", opts)          --> CodeActions to current buffer
+    map("n", "<leader>qf", "<Plug>(coc-fix-current)", opts)         --> Apply preferred quickfix action on current line
+
+    ----------------------------------------------------
+    -- SECTION: Diagnostics -> Refactoring
+    ----------------------------------------------------
+    local opts = { silent = true }
+    map("n", "<leader>re", "<Plug>(coc-codeaction-refactor)", opts)
+    map("v", "<leader>re", "<Plug>(coc-codeaction-refactor-selected)", opts)
+    map("n", "<leader>rn", "<Plug>(coc-rename)", opts)
+
+    ----------------------------------------------------
+    -- SECTION: Diagnostics -> CodeLens
+    ----------------------------------------------------
+    local opts = { silent = true, nowait = true }
+    map("n", "<leader>cl", "<Plug>(coc-codelens-action)", opts)
 
     ----------------------------------------------------
     -- SECTION: Create User Command
