@@ -17,6 +17,11 @@ _G.MUtils.open_in_browser = function(url)
   local command = vim.loop.os_uname().sysname == "Darwin" and "open" or "xdg-open"
   require("plenary.job"):new({ command = command, args = { url } }):start()
 end
+
+_G.MUtils.visualMacroExecute = function()
+  cmd('echo "@".getcmdline()')
+  cmd([[execute ":'<,'>normal @".nr2char(getchar())]])
+end
 ----------------------------------------------------
 -- SECTION: Functions
 ----------------------------------------------------

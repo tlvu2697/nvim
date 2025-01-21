@@ -1,7 +1,7 @@
 local plugins = {
   -- GROUP: Theme
   require "plugins.theme.nightfox",
-  require "plugins.theme.lualine",
+  require "plugins.theme.lualine_nvim",
 
   -- GROUP: Basic
   require "plugins.basic.vimux",
@@ -20,6 +20,8 @@ local plugins = {
   "tpope/vim-surround",
   "tpope/vim-unimpaired",
   "nvim-lua/plenary.nvim",
+  require "plugins.basic.text_case",
+  require "plugins.basic.which_key",
 
   -- GROUP: Development
   require 'plugins.development.coc',

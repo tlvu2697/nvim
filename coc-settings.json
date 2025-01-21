@@ -27,7 +27,7 @@
           "semanticHighlighting": true,
           "signatureHelp": true,
           "typeHierarchy": true,
-          "workspaceSymbol": true
+          "workspaceSymbol": true,
         }
       },
       "filetypes": ["ruby"],

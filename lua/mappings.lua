@@ -37,6 +37,7 @@ map("n", "<space><S-Tab>", "gT", { silent = true })   --> Tab > Previous
 -- SECTION: Files
 ----------------------------------------------------
 map("n", "<space><space>", "<ESC>:w<CR>", { silent = true })                                                      --> File > Save
+map("n", "<C-s>", "<ESC>:w<CR>", { silent = true })                                                               --> File > Save
 map("n", "<space>e", "<ESC>:e<CR>", { silent = true })                                                            --> File > Refresh
 map("n", "<space>q", "<ESC>:q<CR>", { silent = true })                                                            --> File > Close
 map("n", "<space>wq", "<ESC>:wq<CR>", { silent = true })                                                          --> File > Save & Close
@@ -84,7 +85,7 @@ map("n", "<space>bp", ":bprevious<CR>", { silent = true }) --> Previous Buffer
 ----------------------------------------------------
 -- SECTION: Macro
 ----------------------------------------------------
-map("x", "@", ':<C-u><cmd>lua require("utils").visualMacroExecute()<CR>') --> Apply macro on visual selection
+map("x", "@", ':<C-u><cmd>lua _G.MUtils.visualMacroExecute()<CR>') --> Apply macro on visual selection
 ----------------------------------------------------
 -- SECTION: Git
 ----------------------------------------------------
